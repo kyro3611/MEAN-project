@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 2.2em;
+    color: #E2F2FB;
+    background-color: #011248; 
+}
+
+header{ 
+    height: 165px;
+    background-color: transparent;
+    border: 10px;
+    border-color: white;
+}
+
+#maindiv{
+    position: relative;
+}
+
+.navbuttons{
+    height: 165px;
+    position:absolute;
+    border: none;
+    background-color: transparent;
+    color: #E2F2FB;
+    padding: 0;
+    font-size: 1em;
+    padding:0 25px 0 25px; 
+    user-select: none;
+}
+
+#homeicon{
+    height: 100px;
+    padding-bottom: -10px;
+}
+
+#videosicon{
+    height: 78px;
+}
+
+#twittericon{
+    height: 90px;
+}
+
+#playersicon{
+    height: 90px;
+}
+
+#rulesicon{
+    height: 80px;
+}
+
+#videosb{
+    left:150px;
+}
+#twitterb{
+    left:307px;
+}
+#playersb{
+    left:461px;
+}
+#rulesb{
+    left:628px;
+}
+
+#hometxt{
+    position: relative;
+    top: -10px;
+}
+
+#twittertxt{
+    position: relative;
+    top: -7px;
+}
+
+#playerstxt{
+    position: relative;
+    top: -7px;
+}
+
+#rulestxt{
+    position: relative;
+    top: -3px;
+}
+
+#bbicondiv{
+    text-align: center;
+    height: 165px;
+}
+
+#bbicon{
+    height: 145px;
+}
+
+#bbicontext{
+    font-weight: bold;
+    position: relative;
+    bottom:38px;
+    user-select: none;
+}
+
+hr{
+    margin: 0;
+    background-color:#E2F2FB;
+}

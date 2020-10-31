@@ -1,0 +1,30 @@
+#bbicon2{    
+    position: absolute;
+    margin-top:174px;
+    left: 50%;
+    margin-left: -354px;
+}
+
+.navbuttons2{
+    position: relative;
+    background-color: transparent;
+    color: #E2F2FB;
+    border: none;
+    height: 420px;
+    font-size: 0.9em;
+    width:200px;
+    top:177px;
+    user-select: none;
+}
+
+.nextprevicon{
+    height: 47px;
+}
+
+.nextprevtxt{
+    margin-bottom: 50px;
+}
+
+#nextb{
+    float: right;
+}
