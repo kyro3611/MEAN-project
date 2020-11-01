@@ -29,6 +29,10 @@ header{
     user-select: none;
 }
 
+.icons{
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+}
+
 #homeicon{
     height: 100px;
     padding-bottom: -10px;
