@@ -70,7 +70,7 @@
 
 #backtxt{
     position: relative;
-    bottom: 7px;
+    bottom: 10px;
 }
 
 #infodiv{
@@ -79,10 +79,6 @@
     left:658px;
     top:285px;
     width: 870px;
-}
-
-.infotitle{
-    font-weight: bold;
 }
 
 #photodiv{
@@ -96,8 +92,4 @@
 #infophoto{
     width: 240px;
     clip: rect(40px,240px,330px,0px);
-}
-
-#name{
-    font-weight: bold;
 }
