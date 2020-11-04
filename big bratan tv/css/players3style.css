@@ -1,0 +1,56 @@
+#pollicon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#polldiv{
+    position: absolute;
+    left:340px;
+    top:170px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#week{
+    margin-bottom: 20px;
+}
+
+.percentagediv{
+    position: relative;
+    text-align: center;
+    height: 640px;
+    margin-right: 170px;
+    display: inline-block;
+}
+
+.rectangle{
+    height: 50px;
+    width: 300px;
+    background-color: #E2F2FB;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.percentagephotodiv{
+    overflow: hidden;
+    width: 300px;
+    height: 490px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.percentagephoto{
+    width: 300px;
+    margin-top: 0px;
+}
+
+.percentagenum{
+    color: black;
+}
+
+.percentagetxt{
+    margin-top: 10px;
+}
+
+.ripicon{
+    position: absolute;
+    top:21px;
+    left:23px;
+}

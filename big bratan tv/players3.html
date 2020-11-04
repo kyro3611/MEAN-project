@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/headerstyle.css">
         <link rel="stylesheet" type="text/css" href="css/playersstyle.css">
-        <link rel="stylesheet" type="text/css" href="css/players1style.css">
+        <link rel="stylesheet" type="text/css" href="css/players3style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     </head>
@@ -44,8 +44,8 @@
                 <span class="nextprevtxt">Twitter</span>
             </button>
             <button id="nextb" class="navbuttons2">
-                <span class="nextprevtxt">Rules</span>
-                <img class="nextprevicon" src="images/header/nexticon.svg" alt="Next Page Icon" >
+                <span id="nexttxt" class="nextprevtxt">Rules</span>
+                <img id="nexticon" class="nextprevicon" src="images/header/nexticon.svg" alt="Next Page Icon" >
             </button>
             <button id="playerb" class="playersnavb">
                 <img id="playericon" class="playersnavicon" src="images/players/playericon.svg" alt="Player Icon">
@@ -56,44 +56,36 @@
             <button id="pollb" class="playersnavb">
                 <img id="pollicon" class="playersnavicon" src="images/players/pollicon.svg" alt="Poll Icon">
             </button> 
-            <button id="scrollb">
-                <img id="scrollicon" src="images/players/scrollicon.svg" alt="Scroll Icon">
-            </button>
-            <div id="profilesdiv">
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/christmas.png" alt="Christmas Photo">
-                    <div class="profiletxt" >Christmas</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/david.png" alt="David Photo">
-                    <div class="profiletxt" >David</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/nicole.png" alt="Nicole Photo">
-                    <div class="profiletxt" >Nicole</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/dani.png" alt="Dani Photo">
-                    <img class="ripicon" src="images/players/ripicon.svg" alt="Player Gone Icon">
-                    <div class="profiletxt" >Dani</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/cody.png" alt="Cody Photo">
-                    <div class="profiletxt" >Cody</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/kevin.png" alt="Kevin Photo">
-                    <div class="profiletxt" >Kevin</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/tyler.png" alt="Tyler Photo">
-                    <img class="ripicon" src="images/players/ripicon.svg" alt="Player Gone Icon">
-                    <div class="profiletxt" >Tyler</div>
-                </button>
-                <button class="profileb">
-                    <img class="profilephoto" src="images/players/Bayleigh.png" alt="Bayleigh Photo">
-                    <div class="profiletxt" >Bayleigh</div>
-                </button>
+            <div id="polldiv">
+                <div id="week">Week 5</div>
+                <div class="percentagediv">
+                    <div class="percentagephotodiv">
+                        <img id="percentagephoto1" class="percentagephoto" src="images/players/david.png" alt="David Photo">
+                    </div>
+                    <div class="rectangle">
+                        <div id="percentagenum1" class="percentagenum">50%</div>
+                    </div>
+                    <div id="percentagetxt1" class="percentagetxt">David</div>
+                </div>
+                <div class="percentagediv">
+                    <div class="percentagephotodiv">
+                        <img class="ripicon" src="images/players/ripicon.svg" alt="Player Gone Icon"> 
+                        <img id="percentagephoto2" class="percentagephoto" src="images/players/tyler.png" alt="Tyler Photo">
+                    </div>
+                    <div class="rectangle">
+                        <div id="percentagenum2" class="percentagenum">15%</div>
+                    </div>
+                    <div id="percentagetxt2" class="percentagetxt">Tyler</div>
+                </div>
+                <div class="percentagediv">
+                    <div class="percentagephotodiv">
+                        <img id="percentagephoto3" class="percentagephoto" src="images/players/cody.png" alt="Cody Photo">
+                    </div>
+                    <div class="rectangle">
+                        <div id="percentagenum3" class="percentagenum">35%</div>
+                    </div>
+                    <div id="percentagetxt4" class="percentagetxt">Cody</div>
+                </div>
             </div>
         </div>
     </body>
