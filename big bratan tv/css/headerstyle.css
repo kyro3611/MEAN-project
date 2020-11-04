@@ -13,6 +13,10 @@ header{
     border-color: white;
 }
 
+button{
+    user-select: none;
+}
+
 #maindiv{
     position: relative;
 }
@@ -26,7 +30,6 @@ header{
     padding: 0;
     font-size: 1em;
     padding:0 25px 0 25px; 
-    user-select: none;
 }
 
 .icons{
@@ -106,4 +109,29 @@ header{
 hr{
     margin: 0;
     background-color:#E2F2FB;
+    position: relative;
+}
+
+.nextprevicon{
+    height: 47px;
+}
+
+.nextprevtxt{
+    position: relative;
+    bottom: 14px;
+}
+
+#nextb{
+    float: right;
+}
+
+.navbuttons2{
+    position: relative;
+    background-color:transparent;
+    border: none;
+    height: 420px;
+    font-size: 0.9em;
+    width:200px;
+    top:177px;
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
 }

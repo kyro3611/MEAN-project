@@ -1,0 +1,46 @@
+#playersicon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#playerstxt{
+    color: #50B5FF;
+    font-weight: bold;
+}
+
+.playersnavb{
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    position:absolute;
+    border: none;
+    padding:25px; 
+    user-select: none;
+}
+
+.playersnavicon{
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+}
+
+#voteicon{
+    width: 90px;
+}
+
+#playericon{
+    width: 95px;
+}
+
+#pollicon{
+    width: 90px;
+}
+
+#playerb{
+    left:300px;
+}
+
+#voteb{
+    left:460px;
+}
+
+#pollb{
+    left:626px;
+}

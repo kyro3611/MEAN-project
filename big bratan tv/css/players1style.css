@@ -1,0 +1,41 @@
+#playericon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#profilesdiv{
+    width:1280px;
+    position: absolute;
+    left: 337px;
+    top:150px;
+}
+
+.profileb{
+    position: relative;
+    height: 520px;
+    display: inline-block;
+    font-size: 1em;
+    background-color: transparent;
+    color: #E2F2FB;
+    border: none;
+    padding: 0;
+    margin: 0 30px 25px 0 ;
+}
+
+.profilephoto{
+    height: 460px;
+}
+
+.ripicon{
+    position: absolute;
+    top:11px;
+    left:13px;
+}
+
+#scrollb{
+    padding: 25px 25px 400px 50px;
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    right:206px;
+    top:134px;
+}
