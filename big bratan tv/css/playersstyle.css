@@ -10,11 +10,8 @@
 .playersnavb{
     width: 150px;
     height: 150px;
-    background-color: transparent;
     position:absolute;
-    border: none;
     padding:25px; 
-    user-select: none;
 }
 
 .playersnavicon{

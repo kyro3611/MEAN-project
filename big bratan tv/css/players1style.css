@@ -14,9 +14,6 @@
     height: 520px;
     display: inline-block;
     font-size: 1em;
-    background-color: transparent;
-    color: #E2F2FB;
-    border: none;
     padding: 0;
     margin: 0 30px 25px 0 ;
 }
@@ -33,9 +30,74 @@
 
 #scrollb{
     padding: 25px 25px 400px 50px;
-    background-color: transparent;
-    border:none;
     position: absolute;
     right:206px;
     top:134px;
+}
+
+.updownb{
+    width: 60px;
+    height: 60px;
+}
+
+.updownb{
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.updownicon{
+    height: 47px;
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+    padding: 20px;
+}
+
+#downb{
+    bottom:20px;
+}
+
+#upb{
+    top:140px;
+}
+
+#backb{
+    position: relative;
+    top:25px;
+    left:135px;
+    font-size: 0.8em;
+}
+
+#backtxt{
+    position: relative;
+    bottom: 7px;
+}
+
+#infodiv{
+    font-size: 0.8em;
+    position: absolute;
+    left:658px;
+    top:285px;
+    width: 870px;
+}
+
+.infotitle{
+    font-weight: bold;
+}
+
+#photodiv{
+    width: 240px;
+    position: absolute;
+    text-align: center;
+    left:342px;
+    top:293px;
+}
+
+#infophoto{
+    width: 240px;
+    clip: rect(40px,240px,330px,0px);
+}
+
+#name{
+    font-weight: bold;
 }
