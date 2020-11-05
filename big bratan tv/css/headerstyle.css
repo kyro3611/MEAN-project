@@ -123,18 +123,20 @@ hr{
     bottom: 14px;
 }
 
-#nextb{
-    float: right;
-}
-
 #nexticon{
-    position:relative;
-    left:10px;
+    position: absolute;
+    right:40px;
+    top:185px;
 }
 
 #nexttxt{
-    position:relative;
-    left:10px;
+    position: absolute;
+    right: 94px;
+    top: 191px;
+}
+
+#nextb{
+    float: right;
 }
 
 .navbuttons2{

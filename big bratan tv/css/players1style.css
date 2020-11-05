@@ -30,9 +30,10 @@
 
 #scrollb{
     padding: 25px 25px 400px 50px;
-    position: absolute;
+    position: fixed;
+    float: right;
     right:206px;
-    top:134px;
+    top:300px;
 }
 
 .updownb{
@@ -79,6 +80,7 @@
     left:658px;
     top:285px;
     width: 870px;
+    word-wrap: break-word;
 }
 
 #photodiv{
@@ -87,6 +89,7 @@
     text-align: center;
     left:342px;
     top:293px;
+    word-wrap: break-word;
 }
 
 #infophoto{
