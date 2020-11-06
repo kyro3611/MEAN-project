@@ -1,0 +1,50 @@
+#twittericon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#twittertxt{
+    color: #50B5FF;
+    font-weight: bold;
+}
+
+#tweetsdiv{
+    position: absolute;
+    left:445px;
+    top:75px;
+    width: 1035px;
+}
+
+.tweetdiv{
+    border: 1px solid #E2F2FB;
+    border-radius: 10px;
+        margin-bottom: 30px;
+
+}
+
+h2{
+    margin: 15px 0 10px 0px;
+}
+
+p{
+    margin: 0 0 10px 0;
+}
+
+#scrollb{
+    right:266px;
+    top:217px;
+}
+
+.tweeticon{
+    position: absolute;
+    height: 80px;
+    margin: 15px;
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+
+}
+
+.tweettxt{
+    position: relative;
+    width: 920px;
+    left:111px;
+    word-wrap: break-word;
+}
