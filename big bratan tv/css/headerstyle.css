@@ -7,10 +7,13 @@ body{
 }
 
 header{ 
+    position:sticky;
+    top:0px;
     height: 165px;
-    background-color: transparent;
+    background-color: #011248;
     border: 10px;
     border-color: white;
+    z-index: 1;
 }
 
 button{
@@ -135,18 +138,26 @@ hr{
     top: 191px;
 }
 
-#nextb{
-    float: right;
-}
-
 .navbuttons2{
-    position: relative;
+    position: fixed;
     height: 420px;
     font-size: 0.8em;
     width:200px;
-    top:177px;
+    top:342px;
+}
+
+#nextb{
+    right: 0px;
 }
 
 .nextprevicon{
     filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+}
+
+#scrollb{
+    padding: 25px 25px 400px 50px;
+    position: fixed;
+    float: right;
+    right:206px;
+    top:300px;
 }

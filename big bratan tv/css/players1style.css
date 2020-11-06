@@ -22,18 +22,15 @@
     height: 460px;
 }
 
+.profiletxt{
+    word-wrap: break-word;
+    width: 282px;
+}
+
 .ripicon{
     position: absolute;
     top:11px;
     left:13px;
-}
-
-#scrollb{
-    padding: 25px 25px 400px 50px;
-    position: fixed;
-    float: right;
-    right:206px;
-    top:300px;
 }
 
 .updownb{
@@ -64,8 +61,8 @@
 
 #backb{
     position: relative;
-    top:25px;
-    left:135px;
+    top:225px;
+    left:335px;
     font-size: 0.8em;
 }
 
