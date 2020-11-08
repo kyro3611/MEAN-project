@@ -35,43 +35,30 @@
 		font-size: 4.5vw;
 	}
 
-	#home{
-		margin-left: 8%;
+	.svgs img{
 		vertical-align: middle;
 		width: 10vw;
 		height: 6vh;
-		filter: invert(70%) sepia(18%) saturate(6178%) hue-rotate(178deg) brightness(99%) contrast(101%);
+		filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
+	}
+
+	#home{
+		margin-left: 8%;
 	}
 
 	#twitter{
 		margin-left: 20%;
-		vertical-align: middle;
-		width: 10vw;
-		height: 6vh;
-		filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
 	}
 
 	#vote{
 		margin-left: 12%;
-		vertical-align: middle;
-		width: 10vw;
-		height: 6vh;
-		filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
 	}
 
 	#players{
 		margin-left: 18%;
-		vertical-align: middle;
-		width: 10vw;
-		height: 6vh;
-		filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
 	}
 
 	#profile{
 		margin-left: 8%;
-		vertical-align: middle;
-		width: 10vw;
-		height: 6vh;
-		filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
 	}
 }
