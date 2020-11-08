@@ -9,6 +9,11 @@ body {
   position: relative;
 }
 
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
 .players_title{
 	background-color: #051345;
 	color: #E2F2FB;
@@ -29,8 +34,8 @@ body {
 }
 
 #player_image{
-	width: 147px;
-	height: 161px;
+	width: 40vw;
+	height: 25vh;
 	border-radius: 10%;
 }
 
