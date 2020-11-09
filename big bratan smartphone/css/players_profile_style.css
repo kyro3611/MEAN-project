@@ -1,0 +1,121 @@
+body, html{
+	background-color: #051345;
+	margin:0;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+  position: relative;
+}
+
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.players_title{
+	background-color: #051345;
+	color: #E2F2FB;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+	margin-left: 3.3%;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+}
+
+.players_title h1{
+	float: left;
+}
+
+#arrow{
+	float: left;
+	width: 4%;
+	height: 4%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.back{
+	color: #E2F2FB;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 15%;
+	display: flex;
+	align-items: center;
+}
+
+#back_arrow{
+	width: 6%;
+	height: 6%;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 1.5vh;
+}
+
+#back_text{
+	color: #E2F2FB;
+	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 1.5vh;
+}
+
+.profile{
+	display: flex;
+	align-items: center;
+}
+
+.image_and_name{
+	vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+#profile_image{
+	width: 32%;
+	height: 32%;
+	border-radius: 10%;
+}
+
+#name{
+	color: #E2F2FB;
+	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	margin-top: 1%;
+}
+
+#arrows_left{
+	position: absolute;
+	margin-left: 22vw;
+	margin-bottom: 8vh;
+}
+
+#arrows_right{
+	position: absolute;
+	margin-left: 70vw;
+	margin-bottom: 8vh;
+}
+
+.info h4{
+	font-size: 2vh;
+	color: #E2F2FB;
+	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+	margin-left: 4vw;
+	margin-top: 0;
+}
+
+.ask{
+	display: inline-block;
+}
+
+#text_box{
+	margin-top: 0;
+	padding: 0;
+	margin-left: 4vw;
+	width: 80vw;
+	height: 13%;
+}
