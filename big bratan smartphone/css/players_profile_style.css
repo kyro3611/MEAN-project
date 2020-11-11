@@ -116,6 +116,204 @@ body::-webkit-scrollbar { /* WebKit */
 	margin-top: 0;
 	padding: 0;
 	margin-left: 4vw;
-	width: 80vw;
-	height: 13%;
+	width: 90vw;
+	height: 9vh;
+	border-radius: 5%;
+	background-color: #E2F2FB;
+}
+
+::placeholder {
+	color: black;
+	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+}
+
+.emojis_and_send{
+	background-color: #E2F2FB;
+	margin-top: -1.5%;
+	margin-left: 4vw;
+	border-radius: 5%;
+	height: 5%;
+}
+
+#emojis{
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+#send{
+	margin-left: 84%;
+}
+
+/*iphone x*/
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+
+	.info h4{
+		font-size: 2.3vh;
+		color: #E2F2FB;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;
+		margin-left: 4vw;
+		margin-top: 0;
+	}
+
+	.ask{
+		display: inline-block;
+	}
+
+	#text_box{
+		margin-top: 0;
+		padding: 0;
+		margin-left: 4vw;
+		width: 90vw;
+		height: 13vh;
+		border-radius: 5%;
+		background-color: #E2F2FB;
+		font-size: 120%;
+	}
+
+	::placeholder {
+		color: black;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.emojis_and_send{
+		background-color: #E2F2FB;
+		margin-top: -1.5%;
+		margin-left: 4vw;
+		border-radius: 5%;
+		height: 4vh;
+	}
+
+	#emojis{
+		width: 5vw;
+		height: 3vh;
+		margin-top: 1%;
+		margin-left: 1%;
+	}
+
+	#send{
+		width: 5vw;
+		height: 3vh;
+		margin-left: 84%;
+	}
+
+}
+
+/*Google Pixel 2 XL*/
+@media only screen and (device-width: 411px) 
+  and (device-height: 823px) 
+  and (-webkit-device-pixel-ratio: 3.5) 
+  and (orientation: portrait)  {  
+      
+	.info h4{
+		font-size: 2.3vh;
+		color: #E2F2FB;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;
+		margin-left: 4vw;
+		margin-top: 0;
+	}
+
+	.ask{
+		display: inline-block;
+	}
+
+	#text_box{
+		margin-top: 0;
+		padding: 0;
+		margin-left: 4vw;
+		width: 90vw;
+		height: 13vh;
+		border-radius: 5%;
+		background-color: #E2F2FB;
+		font-size: 130%
+	}
+
+	::placeholder {
+		color: black;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;	
+	}
+
+	.emojis_and_send{
+		background-color: #E2F2FB;
+		margin-top: -1.5%;
+		margin-left: 4vw;
+		border-radius: 5%;
+		height: 4vh;
+	}
+
+	#emojis{
+		width: 5vw;
+		height: 3vh;
+		margin-top: 1%;
+		margin-left: 1%;
+	}
+
+	#send{
+		width: 5vw;
+		height: 3vh;
+		margin-left: 84%;
+	}
+}  
+
+/*iphone 6/7/8 Plus*/
+@media only screen and (device-width: 414px) 
+  and (device-height: 736px) 
+  and (-webkit-device-pixel-ratio: 3) { 
+  	.info h4{
+		font-size: 2.3vh;
+		color: #E2F2FB;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;
+		margin-left: 4vw;
+		margin-top: 0;
+	}
+
+	.ask{
+		display: inline-block;
+	}
+
+	#text_box{
+		margin-top: 0;
+		padding: 0;
+		margin-left: 4vw;
+		width: 90vw;
+		height: 10vh;
+		border-radius: 5%;
+		background-color: #E2F2FB;
+		font-size: 110%;
+	}
+
+	::placeholder {
+		color: black;
+		font-weight: normal;
+		font-family: 'Roboto', sans-serif;	
+	}
+
+	.emojis_and_send{
+		background-color: #E2F2FB;
+		margin-top: -1.5%;
+		margin-left: 4vw;
+		border-radius: 5%;
+		height: 4vh;
+	}
+
+	#emojis{
+		width: 5vw;
+		height: 3vh;
+		margin-top: 1%;
+		margin-left: 1%;
+	}
+
+	#send{
+		width: 5vw;
+		height: 3vh;
+		margin-left: 84%;
+	}
 }
