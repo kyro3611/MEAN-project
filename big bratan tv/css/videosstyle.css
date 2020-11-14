@@ -7,16 +7,34 @@
     font-weight: bold;
 }
 
+#highlightsb:hover{
+    background-color: transparent;
+}
+
+#videosb:hover{
+    background-color: transparent;
+}
+
 #videosdiv{
     position: absolute;
-    left:340px;
+    left:331px;
     top:35px;
-    width: 1360px;
+    width: 1272px;
 }
 
 .videosb{
     font-size: 1em;
     padding: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.videosb:hover{
+    background-color: #50B5FF;
+}
+
+.videosb:active{
+    transform: translateY(3px) translateX(3px);
 }
 
 #livestreamsb{
@@ -57,4 +75,8 @@
     margin-top: -3px;
     word-wrap: break-word;
     height:70px;
+}
+
+#scrollb{
+    top:283px;
 }

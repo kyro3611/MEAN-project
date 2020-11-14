@@ -2,11 +2,15 @@
     filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
 }
 
+#playerb:hover{
+    background-color: transparent;
+}
+
 #profilesdiv{
     width:1280px;
     position: absolute;
-    left: 337px;
-    top:150px;
+    left: 331px;
+    top:165px;
 }
 
 .profileb{
@@ -16,6 +20,17 @@
     font-size: 1em;
     padding: 0;
     margin: 0 30px 25px 0 ;
+    cursor: pointer;
+    outline: none;
+}
+
+.profileb:hover{
+    color:#50B5FF;
+    font-size: 1.1em;
+}
+
+.profileb:active{
+    transform: translateY(3px) translateX(3px);
 }
 
 .profilephoto{
@@ -25,11 +40,13 @@
 .profiletxt{
     word-wrap: break-word;
     width: 282px;
+    height: 60px;
+    display: block;
 }
 
 .ripicon{
     position: absolute;
-    top:11px;
+    top:3px;
     left:13px;
 }
 
@@ -43,6 +60,19 @@
     position: absolute;
     left: 50%;
     margin-left: -40px;
+    outline: none;
+}
+
+.updownb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#upb:active{
+    transform: translateY(-10px);
+}
+
+#downb:active{
+    transform: translateY(10px);
 }
 
 .updownicon{
@@ -59,11 +89,25 @@
     top:140px;
 }
 
+
+.videosb:active{
+    transform: translateY(3px) translateX(3px);
+}
+
 #backb{
     position: relative;
     top:225px;
-    left:335px;
+    left:331px;
     font-size: 0.8em;
+    outline: none;
+}
+
+#backb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#backb:active{
+    transform: translateX(-6px);
 }
 
 #backtxt{
@@ -74,7 +118,7 @@
 #infodiv{
     font-size: 0.8em;
     position: absolute;
-    left:658px;
+    left:653px;
     top:285px;
     width: 870px;
     word-wrap: break-word;
@@ -84,11 +128,15 @@
     width: 240px;
     position: absolute;
     text-align: center;
-    left:342px;
+    left:331px;
     top:293px;
     word-wrap: break-word;
 }
 
 #infophoto{
     width: 240px;
+}
+
+#scrollb{
+    top:315px;
 }

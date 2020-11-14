@@ -6,6 +6,10 @@ body{
     background-color: #011248; 
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header{ 
     position:sticky;
     top:0px;
@@ -32,9 +36,14 @@ button{
 .navbuttons{
     height: 165px;
     position:absolute;
-    padding: 0;
     font-size: 1em;
-    padding:0 25px 0 25px; 
+    width:150px;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbuttons:hover{
+    background-color: #50B5FF;
 }
 
 .icons{
@@ -66,13 +75,13 @@ button{
     left:150px;
 }
 #twitterb{
-    left:307px;
+    left:300px;
 }
 #playersb{
-    left:461px;
+    left:450px;
 }
 #rulesb{
-    left:628px;
+    left:600px;
 }
 
 #hometxt{
@@ -98,6 +107,10 @@ button{
 #bbicondiv{
     text-align: center;
     height: 165px;
+    width: 220px;
+    position: absolute;
+    left:50%;
+    margin-left: -110px;
 }
 
 #bbicon{
@@ -108,13 +121,14 @@ button{
     font-weight: bold;
     position: relative;
     bottom:38px;
-    user-select: none;
 }
 
 hr{
+    position: absolute;
     margin: 0;
     background-color:#E2F2FB;
     position: relative;
+    top: 165px;
 }
 
 .nextprevicon{
@@ -144,6 +158,28 @@ hr{
     font-size: 0.8em;
     width:200px;
     top:342px;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbuttons2:hover,#scrollb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+.navbuttons:active{
+    transform: translateY(3px) translateX(3px);
+}
+
+#prevb:active{
+    transform: translateX(-10px);
+}
+
+#nextb:active{
+    transform: translateX(10px);
+}
+
+#scrollb:active{
+    transform: translateY(5px);
 }
 
 #nextb{
@@ -159,5 +195,5 @@ hr{
     position: fixed;
     float: right;
     right:206px;
-    top:300px;
+    outline: none;
 }

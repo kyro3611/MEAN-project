@@ -2,9 +2,13 @@
     filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
 }
 
+#pollb:hover{
+    background-color: transparent;
+}
+
 #polldiv{
     position: absolute;
-    left:340px;
+    left:331px;
     top:170px;
     font-size: 1.3em;
     font-weight: bold;

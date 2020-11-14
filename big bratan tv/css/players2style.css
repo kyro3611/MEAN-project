@@ -2,6 +2,10 @@
     filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
 }
 
+#voteb:hover{
+    background-color: transparent;
+}
+
 #week{
     font-size: 1.3em;
     margin-bottom: 20px;
@@ -9,7 +13,7 @@
 
 #votesdiv{
     position: absolute;
-    left:340px;
+    left:331px;
     top:170px;
 }
 

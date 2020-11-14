@@ -7,6 +7,10 @@
     font-weight: bold;
 }
 
+#rulesb:hover{
+    background-color: transparent;
+}
+
 #rules{
     font-size: 1.3em;
     margin-bottom: 45px;
@@ -14,7 +18,7 @@
 
 #rulesdiv{
     position: absolute;
-    left:340px;
+    left:331px;
     top:53px;
 }
 
