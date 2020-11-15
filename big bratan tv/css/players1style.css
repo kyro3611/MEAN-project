@@ -6,6 +6,10 @@
     background-color: transparent;
 }
 
+#icons_container{
+    position: fixed;
+}
+
 #profilesdiv{
     width:1280px;
     position: absolute;
