@@ -12,7 +12,7 @@
 
 #profilesdiv{
     width:1280px;
-    position: absolute;
+    position: relative;
     left: 331px;
     top:165px;
 }
@@ -86,7 +86,7 @@
 }
 
 #downb{
-    bottom:20px;
+    top:825px;
 }
 
 #upb{
@@ -99,9 +99,11 @@
 }
 
 #backb{
+    height: 65px;
+    width: 350px;
     position: relative;
     top:225px;
-    left:331px;
+    left:301px;
     font-size: 0.8em;
     outline: none;
 }

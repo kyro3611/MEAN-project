@@ -16,7 +16,7 @@
 }
 
 #videosdiv{
-    position: absolute;
+    position: relative;
     left:331px;
     top:35px;
     width: 1272px;

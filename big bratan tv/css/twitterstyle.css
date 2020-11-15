@@ -12,7 +12,7 @@
 }
 
 #tweetsdiv{
-    position: absolute;
+    position: relative;
     left:445px;
     top:75px;
     width: 1035px;
