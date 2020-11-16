@@ -90,9 +90,8 @@
 }
 
 #upb{
-    top:140px;
+    top:130px;
 }
-
 
 .videosb:active{
     transform: translateY(3px) translateX(3px);
@@ -102,7 +101,7 @@
     height: 65px;
     width: 350px;
     position: relative;
-    top:225px;
+    top:190px;
     left:301px;
     font-size: 0.8em;
     outline: none;
@@ -125,7 +124,7 @@
     font-size: 0.8em;
     position: absolute;
     left:653px;
-    top:285px;
+    top:250px;
     width: 870px;
     word-wrap: break-word;
 }
@@ -135,7 +134,7 @@
     position: absolute;
     text-align: center;
     left:331px;
-    top:293px;
+    top:258px;
     word-wrap: break-word;
 }
 
