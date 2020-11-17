@@ -31,8 +31,7 @@ body {
 .navbar{
 	overflow: hidden;
 	position: fixed;
-	/*bottom: 3%;*/
-	bottom: 35%;
+	bottom: 3%;
 	width: 100vw;
 }
 
@@ -61,12 +60,16 @@ body {
 	width: 80px;
 	height: 90px;
 	margin-left: 30%;
-	margin-bottom: 0px; 
-	filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
+	margin-bottom: 0px;
+	filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%); 
 }
 
 #videos_text{
 	color: #E2F2FB;
+}
+
+#home_text{
+	font-weight: bold;
 }
 
 .videos_bar{
