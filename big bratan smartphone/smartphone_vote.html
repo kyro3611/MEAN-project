@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Vote</title>
 	<link rel="stylesheet" type="text/css" href="css/vote_style.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar_style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -10,27 +11,25 @@
 	
 	<div class="vote_title">
 		<h1>Vote</h1>
-		<h3>Week 5<br>
-		<span style="font-weight: normal;">Who would you like to</span><span style="font-weight: bold;"> stay<span style="font-weight: normal;"> in the game?</span></h3>
+		<h3>Week 5</h3><br>
+		<span style="font-weight: normal;">Who would you like to</span><span style="font-weight: bold;">stay</span><span style="font-weight: normal;"> in the game?</span>
 	</div>
 
 	<h3 style="color: #051345; margin-bottom: 0%">MARGIN</h3>
 	<div class="two_players" style="margin-top:18%;">
 		<div class="player">
 			<div>
-				<img id="player_image" src="icons/players_vote/Kevin_vote.png">
+				<img class="player_image" alt="Kevin" src="icons/players_vote/Kevin_vote.png">
 			</div>
-			
-				<a id="player_name">Kevin</a>
-			
+			<a class="player_name">Kevin</a>
 		</div>
 
 		<div class="player" onclick="window.location.href='smartphone_vote_done.html'">
 			<div>
-				<img id="player_image" src="icons/players_vote/Cody_vote.png">
+				<img class="player_image" alt="Cody" src="icons/players_vote/Cody_vote.png">
 			</div>
 			<div>
-				<a id="player_name">Cody</a>
+				<a class="player_name">Cody</a>
 			</div>
 		</div>
 	</div>
@@ -38,10 +37,10 @@
 	<div class="two_players">
 		<div class="player">
 			<div>
-				<img id="player_image" src="icons/players_vote/Nicole A._vote.png">
+				<img class="player_image" alt="Nicole_A" src="icons/players_vote/Nicole_A_vote.png">
 			</div>
 			<div>
-				<a id="player_name">Nicole A.</a>
+				<a class="player_name">Nicole A.</a>
 			</div>
 		</div>
 
@@ -50,7 +49,7 @@
 				
 			</div>
 			<div>
-				<a id="player_name"></a>
+				<a class="player_name"></a>
 			</div>
 		</div>
 	</div>
@@ -60,7 +59,7 @@
 		<div class="wrap_navbar">
 			<div class="nav_element" onclick="window.location.href='smartphone_home.html'">
 				<div class="svgs">
-					<img id="home" src="icons/home.svg">
+					<img id="home" alt="home" src="icons/home.svg">
 				</div>
 				<div class="caption">
 					<a>Home</a>
@@ -69,7 +68,7 @@
 
 			<div class="nav_element" onclick="window.location.href='smartphone_twitter.html'">
 				<div class="svgs">
-					<img id="twitter" src="icons/twitter.svg">
+					<img id="twitter" alt="twitter" src="icons/twitter.svg">
 				</div>
 				<div class="caption">
 					<a>Twitter</a>
@@ -78,7 +77,7 @@
 
 			<div class="nav_element">
 				<div class="svgs">
-					<img id="vote" style="filter: invert(70%) sepia(18%) saturate(6178%) hue-rotate(178deg) brightness(99%) contrast(101%);" src="icons/vote.svg">
+					<img id="vote" alt="vote" style="filter: invert(70%) sepia(18%) saturate(6178%) hue-rotate(178deg) brightness(99%) contrast(101%);" src="icons/vote.svg">
 				</div>
 				<div class="caption">
 					<a style="font-weight:bold; color: #50B5FF;">&nbsp;&nbsp;Vote</a>
@@ -87,7 +86,7 @@
 
 			<div class="nav_element" onclick="window.location.href='smartphone_players.html'">
 				<div class="svgs">
-					<img id="players" src="icons/users-group.svg">
+					<img id="players" alt="players" src="icons/users-group.svg">
 				</div>
 				<div class="caption">
 					<a>Players</a>
@@ -96,7 +95,7 @@
 
 			<div class="nav_element">
 				<div class="svgs">
-					<img id="profile" src="icons/user.svg">
+					<img id="profile" alt="profil" src="icons/user.svg">
 				</div>
 				<div class="caption">
 					<a>John</a>

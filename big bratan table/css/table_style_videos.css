@@ -36,7 +36,7 @@ body {
 	width: 100vw;
 }
 
-#nav_element{
+.nav_element{
 	color: #50B5FF;
 	font-family: 'Roboto', sans-serif;
 	font-size: 270%;
@@ -116,7 +116,7 @@ body {
 	background-color: #C0C0C0;
 }
 
-#thumbnail{
+.thumbnail{
 	width: 378px;
 	height: 229px;
 }

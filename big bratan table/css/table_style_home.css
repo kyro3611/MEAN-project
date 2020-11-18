@@ -35,7 +35,7 @@ body {
 	width: 100vw;
 }
 
-#nav_element{
+.nav_element{
 	color: #50B5FF;
 	font-family: 'Roboto', sans-serif;
 	font-size: 270%;

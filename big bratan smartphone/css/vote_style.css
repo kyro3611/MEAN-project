@@ -43,7 +43,7 @@ body::-webkit-scrollbar { /* WebKit */
 	margin-bottom: 5%;
 }
 
-#player_image{
+.player_image{
 	width: 40vw;
 	height: 25vh;
 	border-radius: 10%;
@@ -51,7 +51,7 @@ body::-webkit-scrollbar { /* WebKit */
 	padding: 0;
 }
 
-#player_name{
+.player_name{
 	color: #E2F2FB;
 	font-family: 'Roboto', sans-serif;
 }
