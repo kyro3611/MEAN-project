@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Twitter</title>
 	<link rel="stylesheet" type="text/css" href="css/twitter_style.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar_style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -9,55 +10,55 @@
 <body>
 
 	<div class="twitter_head">
-		<img src="icons/twitter.svg">
+		<img alt="twitter_icon" src="icons/twitter.svg">
 		<h3>@CBSBigBrother</h3>
 	</div>
 
 	<div class="twitter_container">
 		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_1" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>John</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_2" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Bill</h4>
-	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
+	        	<p>Lorem ipsum dolor sit amet</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_3" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Christos</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_4" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Papas</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_5" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Chris</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_6" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Stathis</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
 			</div>
    		</div>
    		<div class="tweet_div">
-	    	<img id="tweet_icon" src="icons/tweeticon.svg" alt="Tweet Icon">
+	    	<img class="tweet_icon" alt="tweet_icon_7" src="icons/tweeticon.svg">
 	        <div class="tweet_text">
 	    		<h4>Baggelo</h4>
 	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis id purus a aliquam. Nam namnam</p>
@@ -65,13 +66,21 @@
    		</div>
 	</div>
 
-	<h1 style="color: #051345; margin-bottom: 12%">MARGIN</h1>
+	
+	<h1 style="color: #051345; margin-bottom: 37%">MARGIN</h1>
 
+	<div class="my_tweet">
+		<textarea id="text_box" placeholder="Write your tweet" rows="3" ></textarea>
+		<div class="emojis_and_send">
+			<img id="emojis" alt="emojis" src="icons/emojis.png">
+			<img id="send" alt="send" src="icons/send.png">
+		</div>
+	</div>
 	<div class="navbar">
 		<div class="wrap_navbar">
 			<div class="nav_element" onclick="window.location.href='smartphone_home.html'">
 				<div class="svgs">
-					<img id="home" src="icons/home.svg">
+					<img id="home" alt="home" src="icons/home.svg">
 				</div>
 				<div class="caption">
 					<a>Home</a>
@@ -80,7 +89,7 @@
 
 			<div class="nav_element">
 				<div class="svgs">
-					<img id="twitter" style="filter: invert(70%) sepia(18%) saturate(6178%) hue-rotate(178deg) brightness(99%) contrast(101%);" src="icons/twitter.svg">
+					<img id="twitter" alt="twitter" style="filter: invert(70%) sepia(18%) saturate(6178%) hue-rotate(178deg) brightness(99%) contrast(101%);" src="icons/twitter.svg">
 				</div>
 				<div class="caption">
 					<a style="font-weight:bold; color: #50B5FF;">Twitter</a>
@@ -89,7 +98,7 @@
 
 			<div class="nav_element" onclick="window.location.href='smartphone_vote.html'">
 				<div class="svgs">
-					<img id="vote" src="icons/vote.svg">
+					<img id="vote" alt="vote" src="icons/vote.svg">
 				</div>
 				<div class="caption">
 					<a>&nbsp;&nbsp;Vote</a>
@@ -98,7 +107,7 @@
 
 			<div class="nav_element" onclick="window.location.href='smartphone_players.html'">
 				<div class="svgs">
-					<img id="players" src="icons/users-group.svg">
+					<img id="players" alt="players" src="icons/users-group.svg">
 				</div>
 				<div class="caption">
 					<a>Players</a>
@@ -106,8 +115,8 @@
 			</div>
 
 			<div class="nav_element">
-				<div class="svgs">
-					<img id="profile" src="icons/user.svg">
+				<div class="svgs"> 
+					<img id="profile" alt="profile" src="icons/user.svg">
 				</div>
 				<div class="caption">
 					<a>John</a>
