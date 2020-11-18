@@ -35,12 +35,13 @@ body::-webkit-scrollbar { /* WebKit */
 	position: relative;
 	align-self: flex-start;
   	width: 55%;
-  	height: 43%;
+  	height: 40%;
 	margin-top: 43vh;
 	margin-left: 50%;
 	transform: translate(-50%, -50%);
 	display: block;
 	text-align: center;
+	border-radius: 5px;
 }
 
 #text{

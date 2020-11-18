@@ -43,7 +43,7 @@ body::-webkit-scrollbar { /* WebKit */
 
 .tweet_div{
     border: 1px solid #E2F2FB;
-    border-radius: 5%;
+    border-radius: 5px;
     margin-top: 5%;
     margin-left:4%;
     width: 90%;
