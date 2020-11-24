@@ -1,0 +1,110 @@
+#homeicon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#hometxt{
+    color: #50B5FF;
+    font-weight: bold;
+}
+
+#homeb:hover{
+    background-color: transparent;
+}
+
+#bbicon2{    
+    position: absolute;
+    margin-top:174px;
+    left: 50%;
+    margin-left: -354px;
+}
+
+#liveb{
+    background-color: #E2F2FB;
+    width: 590px;
+    height: 112px;
+    position: absolute;
+    margin-top:615px;
+    left: 50%;
+    margin-left: -295px;
+    font-size: 1.2em;
+    text-shadow: 0px 4px 4px #B0B0B0;  
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#livetxt{
+    color: black;
+}
+
+#livetxt2{
+    color: #D81313;
+}
+
+#livetxt,#livetxt2{
+    position: relative;
+    bottom: 5px;
+}
+
+#liveicon{
+    position: relative;
+    top: 8px;
+}
+
+#liveicon2{
+    position: relative;
+    top: 12px;
+}
+
+.extrab{
+    background-color: #E2F2FB;
+    width:381px;
+    height:93px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-shadow: 0px 4px 4px #B0B0B0;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+#highlightsb{
+    position: fixed;
+    bottom:55px;
+    left:25px;
+}
+
+#voteb{
+    position: fixed;
+    bottom:55px;
+    right:25px;
+}
+
+#voteicon{
+    position: relative;
+    top: 9px;
+}
+
+#highlightsicon{
+    position: relative;
+    top: 9px;
+}
+
+#highlightstxt{
+    position: relative;
+    bottom: 5px;
+}
+
+#votetxt{
+    position: relative;
+    bottom: 17px;
+}
+
+.extrab:hover,#liveb:hover{
+      background-color: #b0deff;
+      box-shadow: 0 0 0 5px #b0deff;
+}
+
+.extrab:active,#liveb:active{
+    transform: translateY(3px) translateX(3px);
+}
