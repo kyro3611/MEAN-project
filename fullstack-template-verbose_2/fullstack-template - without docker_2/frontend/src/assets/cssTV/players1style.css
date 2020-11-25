@@ -1,0 +1,147 @@
+#playericon{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#playerb:hover{
+    background-color: transparent;
+}
+
+#icons_container{
+    position: fixed;
+}
+
+#profilesdiv{
+    width:1280px;
+    position: relative;
+    left: 331px;
+    top:165px;
+}
+
+.profileb{
+    position: relative;
+    height: 520px;
+    display: inline-block;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 30px 25px 0 ;
+    cursor: pointer;
+    outline: none;
+}
+
+.profileb:hover{
+    color:#50B5FF;
+    font-size: 1.1em;
+}
+
+.profileb:active{
+    transform: translateY(3px) translateX(3px);
+}
+
+.profilephoto{
+    height: 460px;
+}
+
+.profiletxt{
+    word-wrap: break-word;
+    width: 282px;
+    height: 60px;
+    display: block;
+}
+
+.ripicon{
+    position: absolute;
+    top:3px;
+    left:13px;
+}
+
+.updownb{
+    width: 60px;
+    height: 60px;
+}
+
+.updownb{
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    outline: none;
+}
+
+.updownb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#upb:active{
+    transform: translateY(-10px);
+}
+
+#downb:active{
+    transform: translateY(10px);
+}
+
+.updownicon{
+    height: 47px;
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+    padding: 20px;
+}
+
+#downb{
+    top:825px;
+}
+
+#upb{
+    top:130px;
+}
+
+.videosb:active{
+    transform: translateY(3px) translateX(3px);
+}
+
+#backb{
+    height: 65px;
+    width: 350px;
+    position: relative;
+    top:190px;
+    left:301px;
+    font-size: 0.8em;
+    outline: none;
+}
+
+#backb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#backb:active{
+    transform: translateX(-6px);
+}
+
+#backtxt{
+    position: relative;
+    bottom: 10px;
+}
+
+#infodiv{
+    font-size: 0.8em;
+    position: absolute;
+    left:653px;
+    top:250px;
+    width: 870px;
+    word-wrap: break-word;
+}
+
+#photodiv{
+    width: 240px;
+    position: absolute;
+    text-align: center;
+    left:331px;
+    top:258px;
+    word-wrap: break-word;
+}
+
+#infophoto{
+    width: 240px;
+}
+
+#scrollb{
+    top:315px;
+}

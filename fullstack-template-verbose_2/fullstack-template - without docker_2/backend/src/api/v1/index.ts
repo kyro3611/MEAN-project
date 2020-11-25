@@ -5,6 +5,9 @@ import { FilesController } from './files/files.controller';
 import { SocketEventsController } from './socket-events/socket-events.controller';
 import { ExampleController } from './example/example.controller';
 import { TVHomeController } from './TVHome/TVHome.controller';
+import { TVLivestreamsController } from './TVLivestreams/TVLivestreams.controller';
+import { SmartphoneHomeController } from './smartphoneHome/smartphoneHome.controller';
+
 
 const apiV1Router = express.Router();
 
@@ -38,6 +41,11 @@ apiV1Router
   .use(
     '/TVHome',
     new TVHomeController().applyRoutes()
+  )
+
+  .use(
+    '/TVLivestrams',
+    new TVLivestreamsController().applyRoutes()
   )
   
   // smartphone home routes

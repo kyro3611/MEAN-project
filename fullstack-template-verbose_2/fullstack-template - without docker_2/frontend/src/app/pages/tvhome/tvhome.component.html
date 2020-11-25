@@ -1,62 +1,65 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <title>Big Brother</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    </head>
-    <body>
-        <header>
-            <button id="homeb" class="navbuttons">
-                <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
-                <span id="hometxt">Home</span>
-            </button>
-            <button id="videosb" class="navbuttons" onclick="window.location.href='videos.html'">
-                <img id="videosicon" class="icons" src="./assets/images/header/videosicon.svg" alt="Videos Icon">
-                <span id="videostxt">Videos</span>
-            </button>
-            <button id="twitterb" class="navbuttons" onclick="window.location.href='twitter.html'">
-                <img id="twittericon" class="icons" src="./assets/images/header/twittericon.svg" alt="Twitter Icon">
-                <span id="twittertxt">Twitter</span>
-            </button>
-            <button id="playersb" class="navbuttons" onclick="window.location.href='players1.html'">
-                <img id="playersicon" class="icons" src="./assets/images/header/playersicon.svg" alt="Players Icon">
-                <span id="playerstxt">Players</span>
-            </button>
-            <button id="rulesb" class="navbuttons" onclick="window.location.href='rules.html'">
-                <img id="rulesicon" class="icons" src="./assets/images/header/rulesicon.svg" alt="Rules Icon">
-                <span id="rulestxt">Rules</span>
-            </button>
-            <div id="bbicondiv">
-                <img id=bbicon src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon">
-                <div id="bbicontext">BIG BROTHER</div>
-            </div>
-            <hr>
-        </header>
-        <div id="maindiv">
-            <button id="prevb" class="navbuttons2" onclick="window.location.href='rules.html'">
-                <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
-                <span class="nextprevtxt">Rules</span>
-            </button>
-            <button id="nextb" class="navbuttons2" onclick="window.location.href='videos.html'">
-                <span id="nexttxt" class="nextprevtxt">Videos</span>
-                <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
-            </button>
-            <img id=bbicon2 src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon2">
-            <button id="liveb">
-                <img id="liveicon" src="./assets/images/home/liveicon.svg" alt="Watch Live Icon" >
-                <span id="livetxt"><b>Watch Now</b> </span><span id="livetxt2"><b>Live</b></span>
-                <img id="liveicon2" src="./assets/images/home/liveicon2.svg" alt="Watch Live Icon2" >
-            </button>
-            <button id="highlightsb" class="extrab" onclick="window.location.href='videos2.html'">
-                <span id="highlightstxt">Highlights</span>
-                <img id="highlightsicon" src="./assets/images/home/highlightsicon.svg" alt="Highlights Icon" >
-            </button>
-            <button id="voteb" class="extrab" onclick="window.location.href='players2.html'">
-                <span id="votetxt">Vote Now </span>
-                <img id="voteicon" src="./assets/images/home/votenowicon.svg" alt="Vote Now Icon" >
-            </button>
+
+<head>
+    <title>Big Brother</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <button id="homeb" class="navbuttons">
+            <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
+            <span id="hometxt">Home</span>
+        </button>
+        <button id="videosb" class="navbuttons" routerLink='/TVLivestreams'>
+            <img id="videosicon" class="icons" src="./assets/images/header/videosicon.svg" alt="Videos Icon">
+            <span id="videostxt">Videos</span>
+        </button>
+        <button id="twitterb" class="navbuttons" onclick="window.location.href='twitter.html'">
+            <img id="twittericon" class="icons" src="./assets/images/header/twittericon.svg" alt="Twitter Icon">
+            <span id="twittertxt">Twitter</span>
+        </button>
+        <button id="playersb" class="navbuttons" onclick="window.location.href='players1.html'">
+            <img id="playersicon" class="icons" src="./assets/images/header/playersicon.svg" alt="Players Icon">
+            <span id="playerstxt">Players</span>
+        </button>
+        <button id="rulesb" class="navbuttons" onclick="window.location.href='rules.html'">
+            <img id="rulesicon" class="icons" src="./assets/images/header/rulesicon.svg" alt="Rules Icon">
+            <span id="rulestxt">Rules</span>
+        </button>
+        <div id="bbicondiv">
+            <img id=bbicon src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon">
+            <div id="bbicontext">BIG BROTHER</div>
         </div>
-    </body>
+        <hr>
+    </header>
+    <div id="maindiv">
+        <button id="prevb" class="navbuttons2" onclick="window.location.href='rules.html'">
+            <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
+            <span class="nextprevtxt">Rules</span>
+        </button>
+        <button id="nextb" class="navbuttons2" routerLink='/TVLivestreams'>
+            <span id="nexttxt" class="nextprevtxt">Videos</span>
+            <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
+        </button>
+        <img id=bbicon2 src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon2">
+        <button id="liveb">
+            <img id="liveicon" src="./assets/images/home/liveicon.svg" alt="Watch Live Icon">
+            <span id="livetxt"><b>Watch Now</b> </span><span id="livetxt2"><b>Live</b></span>
+            <img id="liveicon2" src="./assets/images/home/liveicon2.svg" alt="Watch Live Icon2">
+        </button>
+        <button id="highlightsb" class="extrab" onclick="window.location.href='videos2.html'">
+            <span id="highlightstxt">Highlights</span>
+            <img id="highlightsicon" src="./assets/images/home/highlightsicon.svg" alt="Highlights Icon">
+        </button>
+        <button id="voteb" class="extrab" onclick="window.location.href='players2.html'">
+            <span id="votetxt">Vote Now </span>
+            <img id="voteicon" src="./assets/images/home/votenowicon.svg" alt="Vote Now Icon">
+        </button>
+    </div>
+</body>
+
 </html>

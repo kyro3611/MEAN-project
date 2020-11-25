@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ExampleComponent } from './pages/example/example.component';
 import { TVHomeComponent } from './pages/tvhome/tvhome.component';
+import { TVLivestreamsComponent } from './pages/tvlivestreams/tvlivestreams.component';
 import { SmartphoneHomeComponent } from './pages/smartphone-home/smartphone-home.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'tasks', loadChildren: () => import('./pages/tasks/tasks.module').then(m => m.TasksModule) },
   { path: 'example/:id', component: ExampleComponent},
   { path: 'TVHome', component: TVHomeComponent},
+  { path: 'TVLivestreams', component: TVLivestreamsComponent},
   { path: 'smartphoneHome', component: SmartphoneHomeComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'ami-fullstack-tvhome',
   templateUrl: './tvhome.component.html',
-  styleUrls: ['./css/homestyle.css', './css/headerstyle.css']
+  styleUrls: ['../../../assets/cssTV/homestyle.css', '../../../assets/cssTV/headerstyle.css']
 })
 export class TVHomeComponent implements OnInit {
 
