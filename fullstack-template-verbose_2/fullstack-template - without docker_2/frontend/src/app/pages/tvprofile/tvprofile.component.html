@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Big Brother</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <button id="homeb" class="navbuttons" routerLink='/TVHome'>
+            <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
+            <span id="hometxt">Home</span>
+        </button>
+        <button id="videosb" class="navbuttons" routerLink='/TVLivestreams'>
+            <img id="videosicon" class="icons" src="./assets/images/header/videosicon.svg" alt="Videos Icon">
+            <span id="videostxt">Videos</span>
+        </button>
+        <button id="twitterb" class="navbuttons" routerLink='/TVTwitter'>
+            <img id="twittericon" class="icons" src="./assets/images/header/twittericon.svg" alt="Twitter Icon">
+            <span id="twittertxt">Twitter</span>
+        </button>
+        <button id="playersb" class="navbuttons">
+            <img id="playersicon" class="icons" src="./assets/images/header/playersicon.svg" alt="Players Icon">
+            <span id="playerstxt">Players</span>
+        </button>
+        <button id="rulesb" class="navbuttons" routerLink='/TVRules'>
+            <img id="rulesicon" class="icons" src="./assets/images/header/rulesicon.svg" alt="Rules Icon">
+            <span id="rulestxt">Rules</span>
+        </button>
+        <div id="bbicondiv">
+            <img id=bbicon src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon">
+            <div id="bbicontext">BIG BROTHER</div>
+        </div>
+        <hr>
+    </header>
+    <div id="maindiv">
+        <button id="prevb" class="navbuttons2" routerLink='/TVTwitter'>
+            <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
+            <span class="nextprevtxt">Twitter</span>
+        </button>
+        <button id="nextb" class="navbuttons2" routerLink='/TVRules'>
+            <span id="nexttxt" class="nextprevtxt">Rules</span>
+            <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
+        </button>
+        <button id="playerb" class="playersnavb">
+            <img id="playericon" class="playersnavicon" src="./assets/images/players/playericon.svg" alt="Player Icon">
+        </button>
+        <button id="voteb" class="playersnavb" routerLink='/TVVote'>
+            <img id="voteicon" class="playersnavicon" src="./assets/images/players/voteicon.svg" alt="Vote Icon">
+        </button>
+        <button id="pollb" class="playersnavb" routerLink='/TVPolls'>
+            <img id="pollicon" class="playersnavicon" src="./assets/images/players/pollicon.svg" alt="Poll Icon">
+        </button>
+        <button id="upb" class="updownb">
+            <img class="updownicon" src="./assets/images/players/upicon.svg" alt="Previous Player Icon">
+        </button>
+        <button id="downb" class="updownb">
+            <img class="updownicon" src="./assets/images/players/downicon.svg" alt="Next Player Icon">
+        </button>
+        <button id="backb" routerLink='/TVPlayers'>
+            <img id="backicon" src="./assets/images/players/backicon.svg" alt="Back Icon">
+            <span id="backtxt">Back to players list</span>
+        </button>
+        <div id="photodiv">
+            <img id="infophoto" src="./assets/images/players/christmas.png" alt="Christmas Photo">
+            <div id="phototxt"><b>Christmas</b></div>
+        </div>
+        <div id="infodiv">
+            <span><b>Age:</b></span>
+            <span id="agetxt">38</span><br>
+            <span><b>Hometown:</b></span>
+            <span id="hometowntxt">Raleigh, North Carolina</span><br>
+            <span><b>Current city:</b></span>
+            <span id="currentcitytxt">Raleigh, North Carolina</span><br>
+            <span><b>Occupation:</b></span>
+            <span id="occupationtxt">Fitness Entepreneur</span><br>
+            <span><b>Points:</b></span>
+            <span id="pointstxt">35</span><br><br>
+            <span><b>Fun facts about yourself:</b></span><br>
+            <span id="faxtxt">-I love to bake.<br>
+                -I love to garden.<br>
+                -I sing to Loyal every morning and night.<br>
+                -When I decide to do something, I get obsessed and am unstoppable.<br>
+                -I enjoy being underestimated because I know I will do what it takes to prove you wrong.
+            </span><br><br>
+            <span><b>Why do you want to play Big Brother?</b></span><br>
+            <span id="whytxt">
+                I want to show how strong of a plaaaaaaaaaaaaaaaaayer I am. I want to WIN THE
+                $500K this time!
+            </span><br>
+        </div>
+    </div>
+</body>
+
+</html>

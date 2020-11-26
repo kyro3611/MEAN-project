@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Big Brother</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <button id="homeb" class="navbuttons" routerLink='/TVhome'>
+            <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
+            <span id="hometxt">Home</span>
+        </button>
+        <button id="videosb" class="navbuttons" routerLink='/TVLivestreams'>
+            <img id="videosicon" class="icons" src="./assets/images/header/videosicon.svg" alt="Videos Icon">
+            <span id="videostxt">Videos</span>
+        </button>
+        <button id="twitterb" class="navbuttons" routerLink='/TVTwitter'>
+            <img id="twittericon" class="icons" src="./assets/images/header/twittericon.svg" alt="Twitter Icon">
+            <span id="twittertxt">Twitter</span>
+        </button>
+        <button id="playersb" class="navbuttons">
+            <img id="playersicon" class="icons" src="./assets/images/header/playersicon.svg" alt="Players Icon">
+            <span id="playerstxt">Players</span>
+        </button>
+        <button id="rulesb" class="navbuttons" routerLink='/TVRules'>
+            <img id="rulesicon" class="icons" src="./assets/images/header/rulesicon.svg" alt="Rules Icon">
+            <span id="rulestxt">Rules</span>
+        </button>
+        <div id="bbicondiv">
+            <img id=bbicon src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon">
+            <div id="bbicontext">BIG BROTHER</div>
+        </div>
+        <hr>
+    </header>
+    <div id="maindiv">
+        <button id="prevb" class="navbuttons2" routerLink='/TVTwitter'>
+            <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
+            <span class="nextprevtxt">Twitter</span>
+        </button>
+        <button id="nextb" class="navbuttons2" routerLink='/TVRules'>
+            <span id="nexttxt" class="nextprevtxt">Rules</span>
+            <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
+        </button>
+        <button id="playerb" class="playersnavb" routerLink='/TVPlayers'>
+            <img id="playericon" class="playersnavicon" src="./assets/images/players/playericon.svg" alt="Player Icon">
+        </button>
+        <button id="voteb" class="playersnavb" routerLink='/TVVote'>
+            <img id="voteicon" class="playersnavicon" src="./assets/images/players/voteicon.svg" alt="Vote Icon">
+        </button>
+        <button id="pollb" class="playersnavb">
+            <img id="pollicon" class="playersnavicon" src="./assets/images/players/pollicon.svg" alt="Poll Icon">
+        </button>
+        <div id="polldiv">
+            <div id="week">Week 5</div>
+            <div class="percentagediv">
+                <div class="percentagephotodiv">
+                    <img id="percentagephoto1" class="percentagephoto" src="./assets/images/players/david.png" alt="David Photo">
+                </div>
+                <div class="rectangle">
+                    <div id="percentagenum1" class="percentagenum">50%</div>
+                </div>
+                <div id="percentagetxt1" class="percentagetxt">David</div>
+            </div>
+            <div class="percentagediv">
+                <div class="percentagephotodiv">
+                    <img class="ripicon" src="./assets/images/players/ripicon.svg" alt="Player Gone Icon">
+                    <img id="percentagephoto2" class="percentagephoto" src="./assets/images/players/tyler.png" alt="Tyler Photo">
+                </div>
+                <div class="rectangle">
+                    <div id="percentagenum2" class="percentagenum">15%</div>
+                </div>
+                <div id="percentagetxt2" class="percentagetxt">Tyler</div>
+            </div>
+            <div class="percentagediv">
+                <div class="percentagephotodiv">
+                    <img id="percentagephoto3" class="percentagephoto" src="./assets/images/players/cody.png" alt="Cody Photo">
+                </div>
+                <div class="rectangle">
+                    <div id="percentagenum3" class="percentagenum">35%</div>
+                </div>
+                <div id="percentagetxt4" class="percentagetxt">Cody</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

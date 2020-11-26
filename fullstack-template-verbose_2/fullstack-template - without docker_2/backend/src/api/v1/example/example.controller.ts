@@ -13,11 +13,11 @@ export class ExampleController {
     public applyRoutes(): Router {
         const router = Router();
 
-        //router
-           //.post('/sendMessageToClients', this.sendMessageToClients)
+        // router
+        // .post('/sendMessageToClients', this.sendMessageToClients)
         //  .get('/getMessage', this.getMessage);
 
-        router.post('/treatSomeone', this.treatSomeone)
+        router.post('/treatSomeone', this.treatSomeone);
         return router;
     }
 
@@ -45,11 +45,11 @@ export class ExampleController {
 
     }
 
-    public treatSomeone(req: Request, res: Response){
+    public treatSomeone(req: Request, res: Response) {
         const message: string = req.body.message;
         const event: string = req.body.event;
 
-        //sending a broadcast message to all clients
+        // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
     }

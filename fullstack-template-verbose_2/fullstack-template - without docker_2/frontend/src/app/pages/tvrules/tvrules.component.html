@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Big Brother</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <button id="homeb" class="navbuttons" routerLink='/TVHome'>
+            <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
+            <span id="hometxt">Home</span>
+        </button>
+        <button id="videosb" class="navbuttons" routerLink='/TVLivestreams'>
+            <img id="videosicon" class="icons" src="./assets/images/header/videosicon.svg" alt="Videos Icon">
+            <span id="videostxt">Videos</span>
+        </button>
+        <button id="twitterb" class="navbuttons" routerLink='/TVTwitter'>
+            <img id="twittericon" class="icons" src="./assets/images/header/twittericon.svg" alt="Twitter Icon">
+            <span id="twittertxt">Twitter</span>
+        </button>
+        <button id="playersb" class="navbuttons" routerLink='/TVPlayers'>
+            <img id="playersicon" class="icons" src="./assets/images/header/playersicon.svg" alt="Players Icon">
+            <span id="playerstxt">Players</span>
+        </button>
+        <button id="rulesb" class="navbuttons">
+            <img id="rulesicon" class="icons" src="./assets/images/header/rulesicon.svg" alt="Rules Icon">
+            <span id="rulestxt">Rules</span>
+        </button>
+        <div id="bbicondiv">
+            <img id=bbicon src="./assets/images/header/bigbrothericon.jpg" alt="Big Brother Icon">
+            <div id="bbicontext">BIG BROTHER</div>
+        </div>
+        <hr>
+    </header>
+    <div id="maindiv">
+        <button id="prevb" class="navbuttons2" routerLink='/TVPlayers'>
+            <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
+            <span class="nextprevtxt">Players</span>
+        </button>
+        <button id="nextb" class="navbuttons2" routerLink='/TVHome'>
+            <span id="nexttxt" class="nextprevtxt">Home</span>
+            <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
+        </button>
+        <div id="rulesdiv">
+            <div id="rules"><b>Rules</b></div>
+            <div class="rulediv">
+                <img class="rulesicons" src="./assets/images/rules/contestantsicon.svg" alt="Contestants Icon">
+                <div class="rulestxt">The show features <b>16 contestants</b> who live together in a specially
+                    constructed house that is isolated from the outside world.</div>
+            </div>
+            <div class="rulediv">
+                <img id="bookicon" class="rulesicons" src="./assets/images/rules/bookicon.svg" alt="Book Icon">
+                <div class="rulestxt">The name is inspired by <b>Big Brother</b> from George Orwell's novel Nineteen
+                    Eighty-Four, and the housemates are continuously monitored for 3 months during their stay in the
+                    house by live television cameras as well as personal audio microphones.</div>
+            </div>
+            <div class="rulediv">
+                <img class="rulesicons" src="./assets/images/rules/prizeicon.svg" alt="Prize Icon">
+                <div class="rulestxt">Throughout the course of the competition, they gain points through challenges in
+                    the house and they are voted out on a weekly basis until only one remains and wins the prize of
+                    <b>100.000€</b>!</div>
+            </div>
+            <div class="rulediv">
+                <img class="rulesicons" src="./assets/images/rules/eyeicon.svg" alt="Eye Icon">
+                <div class="rulestxt">The viewers have an <b>interactive role</b> through watching the 24/7 Live-stream,
+                    voting, sending questions to the players and leaving their comments in social medias.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -3,7 +3,7 @@ import { NotFound, BadRequest } from 'http-errors';
 import { DIContainer, MinioService, SocketsService } from '@app/services';
 import { logger } from '../../../utils/logger';
 
-export class TVLivestreamsController {
+export class TVTwitterController {
 
     /**
      * Apply all routes for example
@@ -13,7 +13,7 @@ export class TVLivestreamsController {
     public applyRoutes(): Router {
         const router = Router();
 
-        router.post('/TVLivestreams');
+        router.post('/TVTwitter');
         return router;
     }
 }
