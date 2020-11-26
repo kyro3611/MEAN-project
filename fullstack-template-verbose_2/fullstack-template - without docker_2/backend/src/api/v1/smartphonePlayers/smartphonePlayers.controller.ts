@@ -3,7 +3,7 @@ import { NotFound, BadRequest } from 'http-errors';
 import { DIContainer, MinioService, SocketsService } from '@app/services';
 import { logger } from '../../../utils/logger';
 
-export class SmartphoneHomeController {
+export class SmartphonePlayersController {
 
     /**
      * Apply all routes for example
@@ -13,7 +13,7 @@ export class SmartphoneHomeController {
     public applyRoutes(): Router {
         const router = Router();
 
-        router.post('/smartphoneHome');
+        router.post('/smartphonePlayers');
         return router;
     }
 }

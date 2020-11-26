@@ -1,0 +1,139 @@
+body, html{
+	background-color: #051345;
+	margin:0;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+	position: relative;
+}
+
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.twitter_head{
+	overflow: hidden;
+	position: fixed;
+	width: 100vw;
+	background-color: #051345;
+	z-index: 1;
+}
+
+.twitter_head h3{
+	position: absolute;
+	top: 0%;
+	left: 15%;
+	color: #E2F2FB;
+}
+
+.twitter_head img{
+	width: 10%;
+	height: 10%;
+	filter: invert(98%) sepia(20%) saturate(7473%) hue-rotate(177deg) brightness(111%) contrast(97%);
+	margin-top: 3%;
+	margin-left: 4%;
+}
+
+.twitter_container{
+	margin-top: 18%;
+}
+
+.tweet_div{
+    border: 1px solid #E2F2FB;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left:4%;
+    width: 90%;
+    height: 17vh;
+    background-color: white;
+    margin-bottom: 3%;
+}
+
+h4{
+    margin-left: 10%;
+    margin-top: 3%;
+    font-weight: bold;
+    color: #051345;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+p{	
+	position: absolute;
+	margin-top: 2%;
+    margin-left: 1%;
+    color: #051345;
+}
+
+tr{
+	width: 50vw;
+	height: 100px;
+}
+
+.tweet_icon{
+    position: absolute;
+    margin-left: 1%;
+    height: 6%;
+    width: 7%;
+    margin-top: 0%;
+    filter: invert(14%) sepia(10%) saturate(5469%) hue-rotate(194deg) brightness(90%) contrast(115%);
+}
+
+.tweet_text{
+	position: relative;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.my_tweet{
+    margin-left:0%;
+    width: 92%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    margin-bottom: 20%;
+    bottom: 1vh;
+    border: solid;
+    border-bottom: solid;
+    border-width: 15px;
+    border-color: #051345;
+}
+
+#text_box{
+    box-sizing:border-box;
+    width: 99%;
+    border-left: 0;
+    border-right: 0;
+}
+
+::placeholder {
+    color: black;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+.emojis_and_send{
+    background-color: white;
+    margin-top: -1.5%;
+    border-radius: 5%;
+    height: 5%;
+    width: 99%;
+}
+
+#emojis{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+#send{
+    margin-top: 1%;
+    margin-left: 84%;
+}
+
+

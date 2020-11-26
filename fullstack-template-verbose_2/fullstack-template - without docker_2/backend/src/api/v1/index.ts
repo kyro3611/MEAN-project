@@ -6,7 +6,10 @@ import { SocketEventsController } from './socket-events/socket-events.controller
 import { ExampleController } from './example/example.controller';
 import { TVHomeController } from './TVHome/TVHome.controller';
 import { TVLivestreamsController } from './TVLivestreams/TVLivestreams.controller';
-import { SmartphoneHomeController } from './smartphoneHome/smartphoneHome.controller';
+import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmartphone.controller';
+import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
+import { TwitterSmartphoneController } from './twitterSmartphone/twitterSmartphone.controller';
+import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.controller';
 
 
 const apiV1Router = express.Router();
@@ -50,8 +53,26 @@ apiV1Router
   
   // smartphone home routes
   .use(
-    '/smartphoneHome',
-    new SmartphoneHomeController().applyRoutes()
+    '/homepageSmartphone',
+    new HomepageSmartphoneController().applyRoutes()
+  )
+  
+  // smartphone players routes
+  .use(
+    '/smartphonePlayers',
+    new SmartphonePlayersController().applyRoutes()
+  )
+  
+  // twitter smartphone routes
+  .use(
+    '/twitterSmartphone',
+    new TwitterSmartphoneController().applyRoutes()
+  )
+  
+  // vote smartphone routes
+  .use(
+    '/voteSmartphone',
+    new VoteSmartphoneController().applyRoutes()
   );
 
 export { apiV1Router };
