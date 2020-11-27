@@ -4,6 +4,7 @@ import { ITask, TaskModel } from '@app/models';
 import { FilesController } from './files/files.controller';
 import { SocketEventsController } from './socket-events/socket-events.controller';
 import { ExampleController } from './example/example.controller';
+import { TVController } from './TV/TV.controller';
 import { TVHomeController } from './TVHome/TVHome.controller';
 import { TVLivestreamsController } from './TVLivestreams/TVLivestreams.controller';
 import { TVHighlightsController } from './TVHighlights/TVHighlights.controller';
@@ -45,6 +46,11 @@ apiV1Router
   .use(
     '/example',
     new ExampleController().applyRoutes()
+  )
+
+  .use(
+    '/TV',
+    new TVController().applyRoutes()
   )
 
   .use(

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { ExampleComponent } from './pages/example/example.component';
@@ -41,20 +40,22 @@ import { VoteSmartphoneComponent } from './pages/vote-smartphone/vote-smartphone
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      {path: 'TVHome', component: TVHomeComponent},
-      {path: 'TVLivestreams', component: TVLivestreamsComponent},
-      {path: 'TVHighlights', component: TVHighlightsComponent},
-      {path: 'TVTwitter', component: TVTwitterComponent},
-      {path: 'TVPlayers', component: TVPlayersComponent},
-      {path: 'TVProfile', component: TVProfileComponent},
-      {path: 'TVVote', component: TVVoteComponent},
-      {path: 'TVPolls', component: TVPollsComponent},
-      {path: 'TVRules', component: TVRulesComponent},
-      {path: 'homepageSmartphone', component: HomepageSmartphoneComponent},
-      {path: 'twitterSmartphone', component: TwitterSmartphoneComponent},
-      {path: 'voteSmartphone', component: VoteSmartphoneComponent},
-      {path: 'smartphonePlayers', component: SmartphonePlayersComponent}
+      { path: 'example/:id', component: ExampleComponent },
+      { path: 'TVHome', component: TVHomeComponent },
+      { path: 'TVLivestreams', component: TVLivestreamsComponent },
+      { path: 'TVHighlights', component: TVHighlightsComponent },
+      { path: 'TVTwitter', component: TVTwitterComponent },
+      { path: 'TVPlayers', component: TVPlayersComponent },
+      { path: 'TVPlayers/:name', component: TVProfileComponent },
+      { path: 'TVVote', component: TVVoteComponent },
+      { path: 'TVPolls', component: TVPollsComponent },
+      { path: 'TVRules', component: TVRulesComponent },
+      { path: 'homepageSmartphone', component: HomepageSmartphoneComponent },
+      { path: 'twitterSmartphone', component: TwitterSmartphoneComponent },
+      { path: 'voteSmartphone', component: VoteSmartphoneComponent },
+      { path: 'smartphonePlayers', component: SmartphonePlayersComponent }
     ])
   ],
   providers: [],

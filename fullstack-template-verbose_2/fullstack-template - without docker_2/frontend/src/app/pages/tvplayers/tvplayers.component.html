@@ -60,11 +60,11 @@
             <img id="scrollicon" src="./assets/images/players/scrollicon.svg" alt="Scroll Icon">
         </button>
         <div id="profilesdiv">
-            <button class="profileb" routerLink='/TVProfile'>
+            <button class="profileb" [routerLink]="['/TVPlayers','Christmas']">
                 <img class="profilephoto" src="./assets/images/players/christmas.png" alt="Christmas Photo">
                 <span class="profiletxt">Christmas</span>
             </button>
-            <button class="profileb">
+            <button class="profileb" [routerLink]="['/TVPlayers','David']">
                 <img class="profilephoto" src="./assets/images/players/david.png" alt="David Photo">
                 <span class="profiletxt">David</span>
             </button>
