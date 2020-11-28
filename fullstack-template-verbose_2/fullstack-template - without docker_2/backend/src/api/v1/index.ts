@@ -18,6 +18,8 @@ import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmart
 import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
 import { TwitterSmartphoneController } from './twitterSmartphone/twitterSmartphone.controller';
 import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.controller';
+import { SmartableHomeController } from './smartableHome/smartableHome.controller';
+import { SmartableVideosController } from './smartableVideos/smartableVideos.controller';
 
 
 const apiV1Router = express.Router();
@@ -120,6 +122,18 @@ apiV1Router
   .use(
     '/voteSmartphone',
     new VoteSmartphoneController().applyRoutes()
+  )
+  
+  // smartable home
+  .use(
+    '/smartableHome',
+    new SmartableHomeController().applyRoutes()
+  )
+  
+  // smartable videos
+  .use(
+    '/smartableVideos',
+    new SmartableVideosController().applyRoutes()
   );
 
 export { apiV1Router };
