@@ -1,0 +1,56 @@
+body, html{
+	background-color: #051345;
+	margin:0;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+  position: relative;
+}
+
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.vote_title{
+	background-color: #051345;
+	color: #E2F2FB;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+	margin-left: 3.3%;
+	margin-bottom: 0.3vh;
+	width: 100%;
+	position: fixed;
+}
+
+.vote_title h1{ 
+	margin-bottom: 0;
+}
+
+
+#player_image{
+	position: relative;
+	align-self: flex-start;
+  	width: 55%;
+  	height: 40%;
+	margin-top: 43vh;
+	margin-left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#text{
+	color: #E2F2FB;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	position: absolute;
+	font-size: 110%;
+	top:64%;
+	left: 23%;
+}
+

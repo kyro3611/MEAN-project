@@ -16,8 +16,10 @@ import { TVPollsController } from './TVPolls/TVPolls.controller';
 import { TVRulesController } from './TVRules/TVRules.controller';
 import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmartphone.controller';
 import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
+import { SmartphoneProfileController } from './smartphoneProfile/smartphoneProfile.controller';
 import { TwitterSmartphoneController } from './twitterSmartphone/twitterSmartphone.controller';
 import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.controller';
+import { VoteDoneSmartphoneController } from './voteDoneSmartphone/voteDoneSmartphone.controller';
 import { SmartableHomeController } from './smartableHome/smartableHome.controller';
 import { SmartableVideosController } from './smartableVideos/smartableVideos.controller';
 
@@ -112,6 +114,12 @@ apiV1Router
     new SmartphonePlayersController().applyRoutes()
   )
 
+  // smartphone players routes
+  .use(
+    '/smartphoneProfile',
+    new SmartphoneProfile().applyRoutes()
+  )
+
   // twitter smartphone routes
   .use(
     '/twitterSmartphone',
@@ -122,6 +130,13 @@ apiV1Router
   .use(
     '/voteSmartphone',
     new VoteSmartphoneController().applyRoutes()
+  )
+
+  
+  // smartphone players routes
+  .use(
+    '/voteDoneSmartphone',
+    new VoteDoneSmartphoneController().applyRoutes()
   )
   
   // smartable home

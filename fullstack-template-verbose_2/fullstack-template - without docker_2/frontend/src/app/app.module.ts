@@ -20,6 +20,8 @@ import { TwitterSmartphoneComponent } from './pages/twitter-smartphone/twitter-s
 import { VoteSmartphoneComponent } from './pages/vote-smartphone/vote-smartphone.component';
 import { SmartableHomeComponent } from './pages/smartable-home/smartable-home.component';
 import { SmartableVideosComponent } from './pages/smartable-videos/smartable-videos.component';
+import { SmartphoneProfileComponent } from './pages/smartphone-profile/smartphone-profile.component';
+import { VoteDoneSmartphoneComponent } from './pages/vote-done-smartphone/vote-done-smartphone.component';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { SmartableVideosComponent } from './pages/smartable-videos/smartable-vid
     TVRulesComponent,
     SmartableHomeComponent,
     SmartableVideosComponent,
+    SmartphoneProfileComponent,
+    VoteDoneSmartphoneComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,9 @@ import { SmartableVideosComponent } from './pages/smartable-videos/smartable-vid
       { path: 'homepageSmartphone', component: HomepageSmartphoneComponent },
       { path: 'twitterSmartphone', component: TwitterSmartphoneComponent },
       { path: 'voteSmartphone', component: VoteSmartphoneComponent },
+      { path: 'voteDoneSmartphone', component: VoteDoneSmartphoneComponent},
       { path: 'smartphonePlayers', component: SmartphonePlayersComponent },
+      { path: 'smartphoneProfile', component: SmartphoneProfileComponent },
       { path: 'smartableHome', component: SmartableHomeComponent},
       { path: 'smartableVideos', component: SmartableVideosComponent},
     ])
