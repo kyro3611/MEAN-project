@@ -9,6 +9,7 @@ import { VoteSmartphoneComponent } from './pages/vote-smartphone/vote-smartphone
 import { SmartableHomeComponent } from './pages/smartable-Home/smartable-Home.component';
 import { SmartableVideosComponent } from './pages/smartable-Videos/smartable-Videos.component';
 import { VoteDoneSmartphoneComponent } from './pages/vote-done-smartphone/vote-done-smartphone.component';
+import { WallHomeComponent } from './pages/wall-home/wall-home.component';
 
 const routes: Routes = [
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'smartphoneProfile', component: SmartphoneProfileComponent },
   { path: 'smartableHome', component: SmartableHomeComponent},
   { path: 'smartableVideos', component: SmartableVideosComponent},
+  { path: 'wallHome', component: WallHomeComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
