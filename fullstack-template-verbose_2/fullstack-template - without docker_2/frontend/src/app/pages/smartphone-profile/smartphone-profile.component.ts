@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SmartphoneProfileService } from 'src/app/global/services/SmartphoneProfile/SmartphoneProfile.service';
 import playersJson from '../../../assets/playersJson.json';
-import { find } from 'lodash';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'ami-fullstack-smartphone-profile',
@@ -11,6 +12,15 @@ import { find } from 'lodash';
   styleUrls: ['css/players_profile_style.css', 'css/navbar_style.css']
 })
 export class SmartphoneProfileComponent implements OnInit {
+  @ViewChild('profimg', { static: false }) public profimg: ElementRef;
+  @ViewChild('name', { static: false }) public name2: ElementRef;
+  @ViewChild('age', { static: false }) public age2: ElementRef;
+  @ViewChild('hometown', { static: false }) public hometown2: ElementRef;
+  @ViewChild('city', { static: false }) public city2: ElementRef;
+  @ViewChild('occupation', { static: false }) public occupation2: ElementRef;
+  @ViewChild('points', { static: false }) public points2: ElementRef;
+  @ViewChild('why', { static: false }) public why2: ElementRef;
+  @ViewChild('ask', { static: false }) public ask2: ElementRef;
 
   public img;
   public name;
@@ -21,11 +31,12 @@ export class SmartphoneProfileComponent implements OnInit {
   public points;
   public fax;
   public why;
+  public playerindex;
   public socketEvents: { event: string, message: any }[];
 
 
   constructor(private route: ActivatedRoute, private SmartProfileService: SmartphoneProfileService,
-    private socketService: SocketsService) {
+    private socketService: SocketsService, private location: Location) {
     this.socketEvents = [];
   }
 
@@ -33,6 +44,9 @@ export class SmartphoneProfileComponent implements OnInit {
     for (var i in playersJson) {
       if (this.route.snapshot.paramMap.get("name") == playersJson[i].name) {
         var player = playersJson[i];
+        this.playerindex = i;
+        
+        break;
       }
     }
     this.name = this.route.snapshot.paramMap.get("name");
@@ -55,7 +69,38 @@ export class SmartphoneProfileComponent implements OnInit {
       " " + this.city, " " + this.occupation, " " + this.points, " " + this.fax, " " + this.why).subscribe();
   }
 
-  public nextPlayer() {
-    this.SmartProfileService.nextPlayer(this.name).subscribe();
+  /**next or previous player profile */
+  public nextPlayer(x) {
+    var nextPlayer = null;
+    
+    if (x == 1) {           /**next */
+      if (this.playerindex < playersJson.length - 1) {
+        nextPlayer = playersJson[++this.playerindex];
+        console.log(this.playerindex);
+      } else {
+        this.playerindex = 0
+        nextPlayer = playersJson[this.playerindex];
+      }
+    } else if (x == -1) {   /**previous */
+      if (this.playerindex > 0) {
+        nextPlayer = playersJson[--this.playerindex];
+        console.log(this.playerindex);
+      } else {
+        this.playerindex = playersJson.length - 1
+        nextPlayer = playersJson[this.playerindex];
+      }
+    }
+    if (nextPlayer != null) {
+      this.profimg.nativeElement.src = " " + nextPlayer.img;
+      this.name2.nativeElement.innerHTML = " " + nextPlayer.name;
+      this.age2.nativeElement.innerHTML = " " + nextPlayer.age;
+      this.hometown2.nativeElement.innerHTML = " " + nextPlayer.hometown;
+      this.city2.nativeElement.innerHTML = " " + nextPlayer.city;
+      this.occupation2.nativeElement.innerHTML = " " + nextPlayer.occupation;
+      this.points2.nativeElement.innerHTML = " " + nextPlayer.points;
+      this.why2.nativeElement.innerHTML = " " + nextPlayer.why;
+      this.ask2.nativeElement.innerHTML = "Ask " + nextPlayer.name + " anything:";
+      this.location.replaceState("/smartphonePlayers/" + nextPlayer.name);
+    }
   }
 }
