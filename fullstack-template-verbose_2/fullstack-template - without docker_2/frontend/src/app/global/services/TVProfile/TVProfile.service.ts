@@ -15,7 +15,7 @@ export class TVProfileService {
 
     public getProfile(img, name, age, hometown, city, occupation, points, fax, why) {
 
-        console.log('CANCER');
+        console.log('and you know iiit');
 
         return this.http.post(`${this.hostURI}/api/TV/getProfile`,
             {

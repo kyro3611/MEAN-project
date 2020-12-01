@@ -22,6 +22,7 @@ import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.contro
 // import { VoteDoneSmartphoneController } from './voteDoneSmartphone/voteDoneSmartphone.controller';
 import { SmartableHomeController } from './smartableHome/smartableHome.controller';
 import { SmartableVideosController } from './smartableVideos/smartableVideos.controller';
+import { WallHomeController } from './wallHome/wallHome.controller';
 
 
 const apiV1Router = express.Router();
@@ -148,6 +149,12 @@ apiV1Router
   .use(
     '/smartableVideos',
     new SmartableVideosController().applyRoutes()
+  )
+  
+  // wall home
+  .use(
+    '/wallHome',
+    new WallHomeController().applyRoutes()
   );
 
 export { apiV1Router };
