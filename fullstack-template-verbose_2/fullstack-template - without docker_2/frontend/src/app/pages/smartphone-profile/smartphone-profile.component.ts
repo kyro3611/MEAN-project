@@ -55,4 +55,7 @@ export class SmartphoneProfileComponent implements OnInit {
       " " + this.city, " " + this.occupation, " " + this.points, " " + this.fax, " " + this.why).subscribe();
   }
 
+  public nextPlayer() {
+    this.SmartProfileService.nextPlayer(this.name).subscribe();
+  }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import playersJson from '../../../../assets/playersJson.json';
 
 @Injectable({
     providedIn: 'root'
@@ -33,4 +34,34 @@ export class SmartphoneProfileService{
                 , event: "getting profile"
             })
     }
+
+    public nextPlayer(name) {
+
+        console.log('ieee epomenooos');
+        for (var i=0; i<playersJson.length; i++) {
+            if (name == playersJson[i].name) {
+                i++;
+                if(i===16){ //last player, back to first
+                    i=0;
+                }
+                console.log(i);
+                return this.http.post(`${this.hostURI}/api/smartphoneProfile/nextPlayer`,
+                {
+                    message: {
+                        img: playersJson[i].img,
+                        name: playersJson[i].name,
+                        age: playersJson[i].age,
+                        hometown: playersJson[i].hometown,
+                        city: playersJson[i].city,
+                        occupation: playersJson[i].occupation,
+                        points: playersJson[i].points,
+                        fax: playersJson[i].fax,
+                        why: playersJson[i].why
+                    }
+                    , event: "next player"
+                })
+            }
+        }
+    }
 }
+
