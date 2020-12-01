@@ -22,7 +22,7 @@
 			<img id="profile_image" alt="profile_image" src="{{event.message.img}}">
 			<h3 id="name">{{event.message.name}}</h3>
 		</div>
-		<img id="arrows_right" alt="arrows_right" src="/assets/icons/arrows_right.png">
+		<img id="arrows_right" alt="arrows_right" src="/assets/icons/arrows_right.png" (click)="nextPlayer(event.message.name)">
 	</div>
 
 	<div class="info">
