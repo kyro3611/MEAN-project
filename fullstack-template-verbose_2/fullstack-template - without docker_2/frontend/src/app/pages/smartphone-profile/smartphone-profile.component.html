@@ -20,12 +20,12 @@
 	</div>
 
 	<div class="profile">
-		<img id="arrows_left" alt="arrows_left" src="./assets/icons/arrows_left.png" (click)="prevPlayer()">
+		<img id="arrows_left" alt="arrows_left" src="./assets/icons/arrows_left.png" (click)="nextPlayer(-1)">
 		<div class="image_and_name">
 			<img #profimg id="profile_image" alt="profile_image" src="{{event.message.img}}">
 			<h3 #name id="name">{{event.message.name}}</h3>
 		</div>
-		<img id="arrows_right" alt="arrows_right" src="/assets/icons/arrows_right.png" (click)="nextPlayer()">
+		<img id="arrows_right" alt="arrows_right" src="/assets/icons/arrows_right.png" (click)="nextPlayer(1)">
 	</div>
 
 	<div class="info">

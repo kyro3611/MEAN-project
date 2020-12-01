@@ -41,7 +41,6 @@ export class SmartphoneProfileComponent implements OnInit {
 
   ngOnInit() {
     for (var i in playersJson) {
-      console.log(i);
       if (this.route.snapshot.paramMap.get("name") == playersJson[i].name) {
         var player = playersJson[i];
         this.playerindex = i;
@@ -68,9 +67,18 @@ export class SmartphoneProfileComponent implements OnInit {
       " " + this.city, " " + this.occupation, " " + this.points, " " + this.fax, " " + this.why).subscribe();
   }
 
-  public nextPlayer() {
-    if (this.playerindex < playersJson.length - 1) {
-      var nextPlayer = playersJson[++this.playerindex]
+  public nextPlayer(x) {
+    var nextPlayer = null;
+    if (x == 1) {
+      if (this.playerindex < playersJson.length - 1) {
+        nextPlayer = playersJson[++this.playerindex]
+      }
+    } else if (x == -1) {
+      if (this.playerindex > 0) {
+        nextPlayer = playersJson[--this.playerindex]
+      }
+    }
+    if (nextPlayer != null) {
       this.profimg.nativeElement.src = " " + nextPlayer.img;
       this.name2.nativeElement.innerHTML = " " + nextPlayer.name;
       this.age2.nativeElement.innerHTML = " " + nextPlayer.age;
@@ -80,21 +88,6 @@ export class SmartphoneProfileComponent implements OnInit {
       this.points2.nativeElement.innerHTML = " " + nextPlayer.points;
       this.why2.nativeElement.innerHTML = " " + nextPlayer.why;
       this.location.replaceState("/smartphonePlayers/" + nextPlayer.name);
-    }
-  }
-
-  public prevPlayer() {
-    if (this.playerindex > 0) {
-      var prevPlayer = playersJson[--this.playerindex]
-      this.profimg.nativeElement.src = " " + prevPlayer.img;
-      this.name2.nativeElement.innerHTML = " " + prevPlayer.name;
-      this.age2.nativeElement.innerHTML = " " + prevPlayer.age;
-      this.hometown2.nativeElement.innerHTML = " " + prevPlayer.hometown;
-      this.city2.nativeElement.innerHTML = " " + prevPlayer.city;
-      this.occupation2.nativeElement.innerHTML = " " + prevPlayer.occupation;
-      this.points2.nativeElement.innerHTML = " " + prevPlayer.points;
-      this.why2.nativeElement.innerHTML = " " + prevPlayer.why;
-      this.location.replaceState("/smartphonePlayers/" + prevPlayer.name);
     }
   }
 }
