@@ -20,6 +20,7 @@ export class SmartphoneProfileComponent implements OnInit {
   @ViewChild('occupation', { static: false }) public occupation2: ElementRef;
   @ViewChild('points', { static: false }) public points2: ElementRef;
   @ViewChild('why', { static: false }) public why2: ElementRef;
+  @ViewChild('ask', { static: false }) public ask2: ElementRef;
 
   public img;
   public name;
@@ -44,6 +45,7 @@ export class SmartphoneProfileComponent implements OnInit {
       if (this.route.snapshot.paramMap.get("name") == playersJson[i].name) {
         var player = playersJson[i];
         this.playerindex = i;
+        
         break;
       }
     }
@@ -67,15 +69,25 @@ export class SmartphoneProfileComponent implements OnInit {
       " " + this.city, " " + this.occupation, " " + this.points, " " + this.fax, " " + this.why).subscribe();
   }
 
+  /**next or previous player profile */
   public nextPlayer(x) {
     var nextPlayer = null;
-    if (x == 1) {
+    
+    if (x == 1) {           /**next */
       if (this.playerindex < playersJson.length - 1) {
-        nextPlayer = playersJson[++this.playerindex]
+        nextPlayer = playersJson[++this.playerindex];
+        console.log(this.playerindex);
+      } else {
+        this.playerindex = 0
+        nextPlayer = playersJson[this.playerindex];
       }
-    } else if (x == -1) {
+    } else if (x == -1) {   /**previous */
       if (this.playerindex > 0) {
-        nextPlayer = playersJson[--this.playerindex]
+        nextPlayer = playersJson[--this.playerindex];
+        console.log(this.playerindex);
+      } else {
+        this.playerindex = playersJson.length - 1
+        nextPlayer = playersJson[this.playerindex];
       }
     }
     if (nextPlayer != null) {
@@ -87,6 +99,7 @@ export class SmartphoneProfileComponent implements OnInit {
       this.occupation2.nativeElement.innerHTML = " " + nextPlayer.occupation;
       this.points2.nativeElement.innerHTML = " " + nextPlayer.points;
       this.why2.nativeElement.innerHTML = " " + nextPlayer.why;
+      this.ask2.nativeElement.innerHTML = "Ask " + nextPlayer.name + " anything:";
       this.location.replaceState("/smartphonePlayers/" + nextPlayer.name);
     }
   }
