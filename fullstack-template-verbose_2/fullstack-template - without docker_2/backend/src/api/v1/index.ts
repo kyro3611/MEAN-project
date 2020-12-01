@@ -19,7 +19,7 @@ import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlaye
 import { SmartphoneProfileController } from './smartphoneProfile/smartphoneProfile.controller';
 import { TwitterSmartphoneController } from './twitterSmartphone/twitterSmartphone.controller';
 import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.controller';
-// import { VoteDoneSmartphoneController } from './voteDoneSmartphone/voteDoneSmartphone.controller';
+import { VoteDoneSmartphoneController } from './voteDoneSmartphone/voteDoneSmartphone.controller';
 import { SmartableHomeController } from './smartableHome/smartableHome.controller';
 import { SmartableVideosController } from './smartableVideos/smartableVideos.controller';
 import { WallHomeController } from './wallHome/wallHome.controller';
@@ -134,17 +134,17 @@ apiV1Router
   )
 
   // smartphone players routes
-  /*.use(
+  .use(
     '/voteDoneSmartphone',
-     new VoteDoneSmartphoneController().applyRoutes()
-  )*/
-
+    new VoteDoneSmartphoneController().applyRoutes()
+  )
+  
   // smartable home
   .use(
     '/smartableHome',
     new SmartableHomeController().applyRoutes()
   )
-
+  
   // smartable videos
   .use(
     '/smartableVideos',
