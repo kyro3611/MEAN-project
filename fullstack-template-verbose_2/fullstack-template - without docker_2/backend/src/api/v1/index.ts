@@ -138,19 +138,19 @@ apiV1Router
     '/voteDoneSmartphone',
     new VoteDoneSmartphoneController().applyRoutes()
   )
-  
+
   // smartable home
   .use(
     '/smartableHome',
     new SmartableHomeController().applyRoutes()
   )
-  
+
   // smartable videos
   .use(
     '/smartableVideos',
     new SmartableVideosController().applyRoutes()
   )
-  
+
   // wall home
   .use(
     '/wallHome',
