@@ -3,7 +3,6 @@ import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TVProfileService } from 'src/app/global/services/TVProfile/TVProfile.service';
 import playersJson from '../../../assets/playersJson.json';
-import { find } from 'lodash';
 
 @Component({
   selector: 'ami-fullstack-tvprofile',
@@ -32,8 +31,9 @@ export class TVProfileComponent implements OnInit {
 
   ngOnInit() {
     for (var i in playersJson) {
-      if (this.route.snapshot.paramMap.get("name") == playersJson[i].name) {
+      if (this.route.snapshot.paramMap.get("name") === playersJson[i].name) {
         var player = playersJson[i];
+        break;
       }
     }
     this.name = this.route.snapshot.paramMap.get("name");
