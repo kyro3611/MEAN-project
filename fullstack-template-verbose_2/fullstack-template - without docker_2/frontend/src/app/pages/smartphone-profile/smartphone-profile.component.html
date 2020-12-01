@@ -5,7 +5,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body *ngFor="let event of socketEvents">
 	
 	<div class="players_title">
 		<h1>Players</h1><img id="arrow" alt="arrow" src="./assets/icons/triangle.png"><h1>Christmas</h1>
@@ -19,28 +19,27 @@
 	<div class="profile">
 		<img id="arrows_left" alt="arrows_left" src="./assets/icons/arrows_left.png">
 		<div class="image_and_name">
-			<img id="profile_image" alt="profile_image" src="./assets/icons/players/Christmas.jpg">
-			<h3 id="name">Christmas</h3>
+			<img id="profile_image" alt="profile_image" src="{{event.message.img}}">
+			<h3 id="name">{{event.message.name}}</h3>
 		</div>
 		<img id="arrows_right" alt="arrows_right" src="/assets/icons/arrows_right.png">
 	</div>
 
 	<div class="info">
 		<h4>
-			<span style="font-weight: bold;">Age:</span> 38<br>
-			<span style="font-weight: bold;">Hometown:</span> Raleigh, North Carolina<br>
-			<span style="font-weight: bold;">Current city:</span> Raleigh, North Carolina<br>
-			<span style="font-weight: bold;">Occupation:</span> Fitness Entrepreneur<br>
-			<span style="font-weight: bold;">Points:</span> 35<br>
+			<span style="font-weight: bold;">Age:</span>{{event.message.age}}<br>
+			<span style="font-weight: bold;">Hometown:</span>{{event.message.hometown}}<br>
+			<span style="font-weight: bold;">Current city:</span>{{event.message.city}}<br>
+			<span style="font-weight: bold;">Occupation:</span>{{event.message.occupation}}<br>
+			<span style="font-weight: bold;">Points:</span>{{event.message.points}}<br>
 			<br>
 			<span style="font-weight: bold;">Why do you want to play in Big Brother?</span><br>
-			I want to show how strong of a player I am. I want to WIN THE
-			$500K this time!
+			{{event.message.fax}}
 		</h4>
 	</div>
 
 	<div class="ask">
-		<textarea id="text_box" placeholder="Ask Christmas anything:" rows="5" cols="45"></textarea>
+		<textarea id="text_box" placeholder="Ask {{event.message.name}} anything:" rows="5" cols="45"></textarea>
 		<div class="emojis_and_send">
 			<img id="emojis" alt="emojis" src="./assets/icons/emojis.png">
 			<img id="send" alt="send" src="./assets/icons/send.png">

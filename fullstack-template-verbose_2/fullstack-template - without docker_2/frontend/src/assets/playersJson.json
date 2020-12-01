@@ -7,7 +7,7 @@
         "city": "Raleigh, North Carolina",
         "occupation": "Fitness Entepreneur",
         "points": "35",
-        "fax": "I love to bake<br>-I love to garden.<br>-I sing to Loyal every morning and night.<br>-When I decide to do something, I get obsessed and am unstoppable.<br>-I enjoy being underestimated because I know I will do what it takes to prove you wrong.",
+        "fax": "I love to bake. I love to garden. I sing to Loyal every morning and night. When I decide to do something, I get obsessed and am unstoppable. I enjoy being underestimated because I know I will do what it takes to prove you wrong.",
         "why": "I want to show how strong of a plaaaaaaaaaaaaaaaaayer I am. I want to WIN THE $500K this time!"
     },
     {
@@ -144,7 +144,7 @@
     },
     {
         "img": "./assets/images/players/da_vonne.png",
-        "name": "DaVonne",
+        "name": "Davonne",
         "age": "32",
         "hometown": "Inglewood, California",
         "city": "Inglewood, California",

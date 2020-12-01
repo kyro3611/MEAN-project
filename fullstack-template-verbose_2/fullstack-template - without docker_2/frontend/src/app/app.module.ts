@@ -68,6 +68,7 @@ import { WallHomeComponent } from './pages/wall-home/wall-home.component';
       { path: 'voteDoneSmartphone', component: VoteDoneSmartphoneComponent},
       { path: 'smartphonePlayers', component: SmartphonePlayersComponent },
       { path: 'smartphoneProfile', component: SmartphoneProfileComponent },
+      { path: 'smartphonePlayers/:name', component: SmartphoneProfileComponent },
       { path: 'smartableHome', component: SmartableHomeComponent},
       { path: 'smartableVideos', component: SmartableVideosComponent},
       { path: 'wallHome', component: WallHomeComponent}
