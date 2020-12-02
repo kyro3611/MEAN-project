@@ -45,7 +45,6 @@ export class SmartphoneProfileComponent implements OnInit {
       if (this.route.snapshot.paramMap.get("name") == playersJson[i].name) {
         var player = playersJson[i];
         this.playerindex = i;
-        
         break;
       }
     }

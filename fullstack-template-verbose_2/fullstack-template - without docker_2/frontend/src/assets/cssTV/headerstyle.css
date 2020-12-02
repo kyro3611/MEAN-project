@@ -6,10 +6,6 @@ body{
     background-color: #011248; 
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 header{ 
     position:sticky;
     top:0px;
