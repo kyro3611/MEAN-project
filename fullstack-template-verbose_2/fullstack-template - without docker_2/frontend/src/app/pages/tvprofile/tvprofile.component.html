@@ -39,7 +39,7 @@
     <div id="maindiv">
         <button id="prevb" class="navbuttons2" routerLink='/TVTwitter'>
             <img class="nextprevicon" src="./assets/images/header/previcon.svg" alt="Previous Page Icon">
-            <span class="nextprevtxt">Twitter</span>
+            <span class="nextprevtxt"> Twitter</span>
         </button>
         <button id="nextb" class="navbuttons2" routerLink='/TVRules'>
             <span id="nexttxt" class="nextprevtxt">Rules</span>
@@ -54,35 +54,35 @@
         <button id="pollb" class="playersnavb" routerLink='/TVPolls'>
             <img id="pollicon" class="playersnavicon" src="./assets/images/players/pollicon.svg" alt="Poll Icon">
         </button>
-        <button id="upb" class="updownb">
+        <button id="upb" class="updownb" (click)="nextPlayer(-1)">
             <img class="updownicon" src="./assets/images/players/upicon.svg" alt="Previous Player Icon">
         </button>
-        <button id="downb" class="updownb">
+        <button id="downb" class="updownb" (click)="nextPlayer(1)">
             <img class="updownicon" src="./assets/images/players/downicon.svg" alt="Next Player Icon">
         </button>
         <button id="backb" routerLink='/TVPlayers'>
             <img id="backicon" src="./assets/images/players/backicon.svg" alt="Back Icon">
-            <span id="backtxt">Back to players list</span>
+            <span id="backtxt"> Back to players list</span>
         </button>
         <div id="photodiv">
-            <img id="infophoto" src={{event.message.img}} alt="">
-            <div id="phototxt"><b>{{event.message.name}}</b></div>
+            <img #profimg id="infophoto" src={{event.message.img}} alt="">
+            <div #name id="phototxt"><b>{{event.message.name}}</b></div>
         </div>
         <div id="infodiv">
             <span><b>Age:</b></span>
-            <span id="agetxt">{{event.message.age}}</span><br>
+            <span #age id="agetxt">{{event.message.age}}</span><br>
             <span><b>Hometown:</b></span>
-            <span id="hometowntxt">{{event.message.hometown}}</span><br>
+            <span #hometown id="hometowntxt">{{event.message.hometown}}</span><br>
             <span><b>Current city:</b></span>
-            <span id="currentcitytxt">{{event.message.city}}</span><br>
+            <span #city id="currentcitytxt">{{event.message.city}}</span><br>
             <span><b>Occupation:</b></span>
-            <span id="occupationtxt">{{event.message.occupation}}</span><br>
+            <span #occupation id="occupationtxt">{{event.message.occupation}}</span><br>
             <span><b>Points:</b></span>
-            <span id="pointstxt">{{event.message.points}}</span><br><br>
+            <span #points id="pointstxt">{{event.message.points}}</span><br><br>
             <span><b>Fun facts about yourself:</b></span><br>
-            <span id="faxtxt">{{event.message.fax}}</span><br><br>
+            <span #fax id="faxtxt">{{event.message.fax}}</span><br><br>
             <span><b>Why do you want to play Big Brother?</b></span><br>
-            <span id="whytxt">{{event.message.why}}</span><br>
+            <span #why id="whytxt">{{event.message.why}}</span><br>
         </div>
     </div>
 </body>

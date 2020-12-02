@@ -70,7 +70,8 @@ body::-webkit-scrollbar { /* WebKit */
 .image_and_name{
 	vertical-align: top;
     display: inline-block;
-    text-align: center;
+	text-align: center;
+	margin-left:10%;
 }
 
 #profile_image{

@@ -11,7 +11,7 @@
 }
 
 #profilesdiv{
-    width:1280px;
+    width:1520px;
     position: relative;
     left: 331px;
     top:165px;
@@ -23,7 +23,7 @@
     display: inline-block;
     font-size: 1em;
     padding: 0;
-    margin: 0 30px 25px 0 ;
+    margin: 0 39px 25px 0 ;
     cursor: pointer;
     outline: none;
 }

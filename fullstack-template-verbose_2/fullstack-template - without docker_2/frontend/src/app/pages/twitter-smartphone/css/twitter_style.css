@@ -79,7 +79,7 @@ tr{
     margin-left: 1%;
     height: 6%;
     width: 7%;
-    margin-top: 0%;
+    margin-top: -4%;
     filter: invert(14%) sepia(10%) saturate(5469%) hue-rotate(194deg) brightness(90%) contrast(115%);
 }
 
