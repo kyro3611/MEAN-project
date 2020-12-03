@@ -42,7 +42,7 @@ body::-webkit-scrollbar { /* WebKit */
 .back{
 	color: #E2F2FB;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 15%;
+	margin-top: 12%;
 	display: flex;
 	align-items: center;
 }
@@ -82,7 +82,7 @@ body::-webkit-scrollbar { /* WebKit */
 
 #name{
 	color: #E2F2FB;
-	font-weight: normal;
+	font-weight: bold;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	margin-top: 1%;
@@ -100,8 +100,12 @@ body::-webkit-scrollbar { /* WebKit */
 	margin-bottom: 8vh;
 }
 
+.info{
+	height: 25vh;
+}
+
 .info h4{
-	font-size: 2vh;
+	font-size: 14px;
 	color: #E2F2FB;
 	font-weight: normal;
 	font-family: 'Roboto', sans-serif;
@@ -110,6 +114,8 @@ body::-webkit-scrollbar { /* WebKit */
 }
 
 .ask{
+	position: relative;
+	margin-top: 5%;
 	display: inline-block;
 }
 
@@ -152,8 +158,42 @@ body::-webkit-scrollbar { /* WebKit */
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) { 
 
+	.back{
+		margin-top: 12% ;
+		font-size: 18px;
+	}
+
+	.profile{
+		margin-top: 4% ;
+	}
+
+	#profile_image{
+		width: 36%;
+		height: 36%;
+		border-radius: 10%;
+	}
+
+	#arrows_right{
+		position: absolute;
+		margin-left: 67vw;
+		margin-bottom: 8vh;
+	}
+
+	.info {
+		font-size: 15px;
+		margin-top: 0;
+		height: 26vh;
+	}
+
+	.ask{
+		position: relative;
+		bottom: 2%;
+		display: inline-block;
+		margin-top: 14%;
+	}
+
 	.info h4{
-		font-size: 2.3vh;
+		font-size: 18px;
 		color: #E2F2FB;
 		font-weight: normal;
 		font-family: 'Roboto', sans-serif;
@@ -161,16 +201,12 @@ body::-webkit-scrollbar { /* WebKit */
 		margin-top: 0;
 	}
 
-	.ask{
-		display: inline-block;
-	}
-
 	#text_box{
 		margin-top: 0;
 		padding: 0;
 		margin-left: 4vw;
 		width: 90vw;
-		height: 13vh;
+		height: 8vh;
 		border-radius: 5%;
 		background-color: #E2F2FB;
 		font-size: 120%;
@@ -205,14 +241,35 @@ body::-webkit-scrollbar { /* WebKit */
 
 }
 
+
 /*Google Pixel 2 XL*/
 @media only screen and (device-width: 411px) 
   and (device-height: 823px) 
   and (-webkit-device-pixel-ratio: 3.5) 
   and (orientation: portrait)  {  
-      
+
+	.back{
+		font-size: 17px;
+	}
+
+	.profile{
+		margin-left: 10%;
+	}
+
+	#profile_image{
+		width: 35%;
+		height: 32%;
+		border-radius: 10%;
+	}
+
+	#arrows_right{
+		position: absolute;
+		margin-left: 60vw;
+		margin-bottom: 8vh;
+	}
+
 	.info h4{
-		font-size: 2.3vh;
+		font-size: 20px;
 		color: #E2F2FB;
 		font-weight: normal;
 		font-family: 'Roboto', sans-serif;
@@ -221,7 +278,7 @@ body::-webkit-scrollbar { /* WebKit */
 	}
 
 	.ask{
-		display: inline-block;
+		margin-top: 18%;
 	}
 
 	#text_box{
@@ -229,7 +286,7 @@ body::-webkit-scrollbar { /* WebKit */
 		padding: 0;
 		margin-left: 4vw;
 		width: 90vw;
-		height: 13vh;
+		height: 10vh;
 		border-radius: 5%;
 		background-color: #E2F2FB;
 		font-size: 130%
@@ -267,6 +324,13 @@ body::-webkit-scrollbar { /* WebKit */
 @media only screen and (device-width: 414px) 
   and (device-height: 736px) 
   and (-webkit-device-pixel-ratio: 3) { 
+
+	#arrows_right{
+		position: absolute;
+		margin-left: 61vw;
+		margin-bottom: 8vh;
+	}
+
   	.info h4{
 		font-size: 2.3vh;
 		color: #E2F2FB;
@@ -277,7 +341,7 @@ body::-webkit-scrollbar { /* WebKit */
 	}
 
 	.ask{
-		display: inline-block;
+		margin-top: 10%;
 	}
 
 	#text_box{
@@ -316,5 +380,57 @@ body::-webkit-scrollbar { /* WebKit */
 		width: 5vw;
 		height: 3vh;
 		margin-left: 84%;
+	}
+}
+
+/* iPhone 5  */
+@media (device-height : 568px) 
+   and (device-width : 320px) 
+   and (-webkit-min-device-pixel-ratio: 2) {
+
+	.back{
+		font-size: 12px;
+		margin-top: 15%;
+	}
+
+	.info{
+		margin-top: 0;
+	}
+
+	.info h4{
+		height: 15vh;
+		font-size: 12px;
+	}
+
+	#text_box{
+		height: 9vh;
+	}
+
+	.ask{
+		margin-bottom: 4%;
+	}
+
+	#arrows_left{
+		margin-left: 23%;
+	}
+
+	#profile_image{
+		height: 25%;
+		width: 25%;	
+		margin-right: 10%;
+	}
+
+	#name{
+		margin-right: 10%;
+	}
+}
+
+/* Pixel 2  */
+@media (device-height : 411px) 
+   and (device-width : 731px) 
+   and (-webkit-min-device-pixel-ratio: 2) {
+
+	.info h4{
+		font-size: 2px;
 	}
 }

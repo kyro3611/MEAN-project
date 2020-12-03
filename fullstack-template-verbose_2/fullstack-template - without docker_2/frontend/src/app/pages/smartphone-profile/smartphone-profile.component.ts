@@ -21,6 +21,7 @@ export class SmartphoneProfileComponent implements OnInit {
   @ViewChild('points', { static: false }) public points2: ElementRef;
   @ViewChild('why', { static: false }) public why2: ElementRef;
   @ViewChild('ask', { static: false }) public ask2: ElementRef;
+  @ViewChild('bigname', { static: false }) public bigname2: ElementRef;
 
   public img;
   public name;
@@ -91,6 +92,7 @@ export class SmartphoneProfileComponent implements OnInit {
     }
     if (nextPlayer != null) {
       this.profimg.nativeElement.src = " " + nextPlayer.img;
+      this.bigname2.nativeElement.innerHTML = nextPlayer.name;
       this.name2.nativeElement.innerHTML = " " + nextPlayer.name;
       this.age2.nativeElement.innerHTML = " " + nextPlayer.age;
       this.hometown2.nativeElement.innerHTML = " " + nextPlayer.hometown;
@@ -98,7 +100,7 @@ export class SmartphoneProfileComponent implements OnInit {
       this.occupation2.nativeElement.innerHTML = " " + nextPlayer.occupation;
       this.points2.nativeElement.innerHTML = " " + nextPlayer.points;
       this.why2.nativeElement.innerHTML = " " + nextPlayer.why;
-      this.ask2.nativeElement.innerHTML = "Ask " + nextPlayer.name + " anything:";
+      this.ask2.nativeElement.placeholder = "Ask " + nextPlayer.name + " anything:";
       this.location.replaceState("/smartphonePlayers/" + nextPlayer.name);
     }
   }
