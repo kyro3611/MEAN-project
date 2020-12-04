@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BigbratantvComponent } from './pages/bigbratantv/bigbratantv.component';
 import { ExampleComponent } from './pages/example/example.component';
+import { TvComponent } from './pages/test-tv/test-tv.component';
+
 
 const routes: Routes = [
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },

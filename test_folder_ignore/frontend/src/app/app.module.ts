@@ -11,7 +11,7 @@ import { BigbratantvComponent } from './pages/bigbratantv/bigbratantv.component'
   declarations: [
     AppComponent,
     ExampleComponent,
-    BigbratantvComponent,
+    BigbratantvComponent
   ],
   imports: [
     BrowserModule,
