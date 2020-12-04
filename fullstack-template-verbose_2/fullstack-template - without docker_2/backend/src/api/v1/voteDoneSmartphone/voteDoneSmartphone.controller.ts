@@ -13,7 +13,17 @@ export class VoteDoneSmartphoneController {
     public applyRoutes(): Router {
         const router = Router();
 
-        router.post('/twitterSmartphone');
+        router.post('/voteDone');
+        router.post('/voteComplete', this.voteComplete);
         return router;
+    }
+
+    public voteComplete(req: Request, res: Response) {
+        const message: string = req.body.message;
+        const event: string = req.body.event;
+
+        // sending a broadcast message to all clients
+        const socketService = DIContainer.get(SocketsService);
+        socketService.broadcast(event, message);
     }
 }
