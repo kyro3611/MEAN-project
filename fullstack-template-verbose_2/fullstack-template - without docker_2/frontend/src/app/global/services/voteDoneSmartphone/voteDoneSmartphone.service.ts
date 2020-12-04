@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import playersJson from '../../../../assets/playersJson.json';
 
 @Injectable({
     providedIn: 'root'
@@ -18,7 +17,7 @@ export class VoteDoneSmartphoneService{
 
         console.log('yeaaah');
 
-        return this.http.post(`${this.hostURI}/api/voteDone/voteComplete`,
+        return this.http.post(`${this.hostURI}/api/voteDoneSmartphone/voteComplete`,
             {
                 message: {
                     name: name,
