@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'smartphoneHomepage', component: HomepageSmartphoneComponent},
   { path: 'twitterSmartphone', component: TwitterSmartphoneComponent},
   { path: 'voteSmartphone', component: VoteSmartphoneComponent},
+  { path: 'voteSmartphone/:name', component: VoteDoneSmartphoneComponent },
   { path: 'voteDoneSmartphone', component: VoteDoneSmartphoneComponent},
   { path: 'smartphonePlayers', component: SmartphonePlayersComponent},
   { path: 'smartphoneProfile', component: SmartphoneProfileComponent },

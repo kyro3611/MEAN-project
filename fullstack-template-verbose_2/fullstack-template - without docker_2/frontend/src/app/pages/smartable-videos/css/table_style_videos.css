@@ -76,13 +76,14 @@ body {
 .videos_bar{
 	height: 340px;
 	background-color: #005999;
-	bottom: 0;
-	position: absolute;
+	position: relative;
+	margin-top: 9vh;
 	overflow-x: scroll; 
 	display: flex;
 	white-space: nowrap;
 	max-width: 100%;
 	min-width: 100%;
+	z-index: 999;
 }
 
 .wrapper{
