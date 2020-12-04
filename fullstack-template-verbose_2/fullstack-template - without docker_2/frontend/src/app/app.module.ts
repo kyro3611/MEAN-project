@@ -23,6 +23,7 @@ import { SmartableVideosComponent } from './pages/smartable-videos/smartable-vid
 import { SmartphoneProfileComponent } from './pages/smartphone-profile/smartphone-profile.component';
 import { VoteDoneSmartphoneComponent } from './pages/vote-done-smartphone/vote-done-smartphone.component';
 import { WallHomeComponent } from './pages/wall-home/wall-home.component';
+import { TVVotedoneComponent } from './pages/tvvotedone/tvvotedone.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { WallHomeComponent } from './pages/wall-home/wall-home.component';
     SmartphoneProfileComponent,
     VoteDoneSmartphoneComponent,
     WallHomeComponent,
+    TVVotedoneComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { WallHomeComponent } from './pages/wall-home/wall-home.component';
       { path: 'TVPlayers', component: TVPlayersComponent },
       { path: 'TVPlayers/:name', component: TVProfileComponent },
       { path: 'TVVote', component: TVVoteComponent },
+      { path: 'TVVotedone', component: TVVotedoneComponent },
       { path: 'TVPolls', component: TVPollsComponent },
       { path: 'TVRules', component: TVRulesComponent },
       { path: 'homepageSmartphone', component: HomepageSmartphoneComponent },
