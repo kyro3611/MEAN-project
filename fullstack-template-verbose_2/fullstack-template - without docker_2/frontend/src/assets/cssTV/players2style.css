@@ -9,21 +9,20 @@
 #week{
     font-size: 1.3em;
     margin-bottom: 20px;
+    margin-left: 220px;
 }
 
 #votesdiv{
     position: absolute;
-    left:331px;
+    left:111px;
     top:170px;
 }
 
 .votediv{
     display: inline-block;
-    width: 426px;
     height: 600px;
     text-align: center;
-    margin-left: -78px;   
-    margin-right: 139px;
+    margin-left: 220px;
 }
 
 .votephoto{
@@ -45,18 +44,21 @@
     left:20px;
 }
 
-#voteddiv{
+#votedphoto{
+    width:270px;
+    margin-bottom: 15px;
     position: relative;
-    left:175px;
-    text-align: center;
-    font-size: 1.8em;
+    left:714px;
 }
 
-#votedphoto{
-    margin-bottom: 5px;
-    height: 540px;
+#voteddiv{
+    text-align: center;
+    position: relative;
+    left:50%;
+    margin-left: 339px;
 }
 
 #commanddiv{
     margin-top: -60px;
+    margin-left: 220px;
 }

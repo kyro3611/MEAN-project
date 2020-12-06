@@ -5,15 +5,6 @@ import { FilesController } from './files/files.controller';
 import { SocketEventsController } from './socket-events/socket-events.controller';
 import { ExampleController } from './example/example.controller';
 import { TVController } from './TV/TV.controller';
-import { TVHomeController } from './TVHome/TVHome.controller';
-import { TVLivestreamsController } from './TVLivestreams/TVLivestreams.controller';
-import { TVHighlightsController } from './TVHighlights/TVHighlights.controller';
-import { TVTwitterController } from './TVTwitter/TVTwitter.controller';
-import { TVPlayersController } from './TVPlayers/TVPlayers.controller';
-import { TVProfileController } from './TVProfile/TVProfile.controller';
-import { TVVoteController } from './TVVote/TVVote.controller';
-import { TVPollsController } from './TVPolls/TVPolls.controller';
-import { TVRulesController } from './TVRules/TVRules.controller';
 import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmartphone.controller';
 import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
 import { SmartphoneProfileController } from './smartphoneProfile/smartphoneProfile.controller';
@@ -56,51 +47,6 @@ apiV1Router
   .use(
     '/TV',
     new TVController().applyRoutes()
-  )
-
-  .use(
-    '/TVHome',
-    new TVHomeController().applyRoutes()
-  )
-
-  .use(
-    '/TVLivestrams',
-    new TVLivestreamsController().applyRoutes()
-  )
-
-  .use(
-    '/TVHighlights',
-    new TVHighlightsController().applyRoutes()
-  )
-
-  .use(
-    '/TVTwitter',
-    new TVTwitterController().applyRoutes()
-  )
-
-  .use(
-    '/TVPlayers',
-    new TVPlayersController().applyRoutes()
-  )
-
-  .use(
-    '/TVProfile',
-    new TVProfileController().applyRoutes()
-  )
-
-  .use(
-    '/TVVote',
-    new TVVoteController().applyRoutes()
-  )
-
-  .use(
-    '/TVPolls',
-    new TVPollsController().applyRoutes()
-  )
-
-  .use(
-    '/TVRules',
-    new TVRulesController().applyRoutes()
   )
 
   // smartphone home routes

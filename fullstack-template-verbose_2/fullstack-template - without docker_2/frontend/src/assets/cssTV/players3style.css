@@ -8,22 +8,24 @@
 
 #polldiv{
     position: absolute;
-    left:331px;
+    left:151px;
     top:170px;
     font-size: 1.3em;
     font-weight: bold;
+    width:1440px;
 }
 
 #week{
     margin-bottom: 20px;
+    margin-left: 180px;
 }
 
 .percentagediv{
     position: relative;
     text-align: center;
     height: 640px;
-    margin-right: 180px;
     display: inline-block;
+    margin-left: 180px;
 }
 
 .rectangle{
