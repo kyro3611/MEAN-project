@@ -13,7 +13,18 @@ export class WallHomeController {
     public applyRoutes(): Router {
         const router = Router();
 
-        router.post('/twitterSmartphone');
+        router.post('/wallHome');
+        router.post('/playVideo', this.playVideo);
         return router;
+    }
+    
+    public playVideo(req: Request, res: Response) {
+        const message: string = req.body.message;
+        const event: string = req.body.event;
+        console.log('wall will play video');
+
+        // sending a broadcast message to all clients
+        const socketService = DIContainer.get(SocketsService);
+        socketService.broadcast(event, message);
     }
 }

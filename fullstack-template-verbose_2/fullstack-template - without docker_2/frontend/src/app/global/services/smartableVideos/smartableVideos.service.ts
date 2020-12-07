@@ -12,4 +12,16 @@ export class SmartableVideosService{
     constructor(private http: HttpClient){
         this.hostURI = environment.host;
     }
+
+    public playVideo(url){
+        console.log('yeeeahhh');
+
+        return this.http.post(`${this.hostURI}/api/wallHome/playVideo`,
+        {
+            message: {
+                url: url
+            }
+            , event: "play video"
+        })
+    }
 }
