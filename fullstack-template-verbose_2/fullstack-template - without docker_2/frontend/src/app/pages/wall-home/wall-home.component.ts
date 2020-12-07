@@ -20,6 +20,7 @@ export class WallHomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*play video event*/
     this.socketService.syncMessages("play video").subscribe(msg => {
       console.log('playing video...');
       console.log(msg.message.url);
