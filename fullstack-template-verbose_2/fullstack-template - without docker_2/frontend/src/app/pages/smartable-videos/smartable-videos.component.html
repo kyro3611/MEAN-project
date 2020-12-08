@@ -31,66 +31,91 @@
 
 	<div class="videos_bar">
 		<div class="wrapper">
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/-4B6gUkhtNA?autoplay=1&rel=0')">
-				<div class="video" id="video_1">
-					<img class="thumbnail" alt="thumbnail_1" src="./assets/icons_table/thumbnails/thumbnail_1.png">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/-4B6gUkhtNA?autoplay=1&rel=0', 1)">
+				<div class="video">
+					<img class="thumbnail" id="thumbnail_1"  alt="thumbnail_1" src="./assets/icons_table/thumbnails/thumbnail_1.png">
+					<img class="pause" id="pause_1" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(1)">
+					<img class="play" id="play_1" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(1)">
+					<img class="screenshot" id="screenshot_1" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_1" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Livestream</a><img id="live" alt="live" src="./assets/icons_table/live.png">
 				</div>
 			</div>
 
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/tG8JXLbIb1A?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/tG8JXLbIb1A?autoplay=1&rel=0', 2)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_2" style="border-style: solid; border-color: #DB00FF;" src="./assets/icons_table/thumbnails/thumbnail_2.png">
-					<img id="pause" alt="pause" src="./assets/icons_table/pause.png">
-					<img id="screenshot" alt="screenshot" src="./assets/icons_table/screenshot.png">
-					<img id="record" alt="record" src="./assets/icons_table/record.png">
+					<img class="thumbnail" id="thumbnail_2"  alt="thumbnail_2" src="./assets/icons_table/thumbnails/thumbnail_2.png">
+					<img class="pause" id="pause_2" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(2)">
+					<img class="play" id="play_2" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(2)">
+					<img class="screenshot" id="screenshot_2" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_2" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Nicole and Cody’s Talk Show</a>
 				</div>
 			</div>
 
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/ve6ASOghJ20?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/ve6ASOghJ20?autoplay=1&rel=0', 3)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_3" src="./assets/icons_table/thumbnails/thumbnail_3.png">
+					<img class="thumbnail" id="thumbnail_3"  alt="thumbnail_3" src="./assets/icons_table/thumbnails/thumbnail_3.png">
+					<img class="pause" id="pause_3" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(3)">
+					<img class="play" id="play_3" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(3)">
+					<img class="screenshot" id="screenshot_3" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_3" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Cooking Challenge</a>
 				</div>
 			</div>
 
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/vVth99XvPWE?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/vVth99XvPWE?autoplay=1&rel=0', 4)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_4" src="./assets/icons_table/thumbnails/thumbnail_4.png">
+					<img class="thumbnail" id="thumbnail_4" alt="thumbnail_4" src="./assets/icons_table/thumbnails/thumbnail_4.png">
+					<img class="pause" id="pause_4" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(4)">
+					<img class="play" id="play_4" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(4)">
+					<img class="screenshot" id="screenshot_4" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_4" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Challenge of the Day 23/10</a>
 				</div>
 			</div>
 
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/ve6ASOghJ20?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/ve6ASOghJ20?autoplay=1&rel=0', 5)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_5" src="./assets/icons_table/thumbnails/thumbnail_5.png">
+					<img class="thumbnail" id="thumbnail_5" alt="thumbnail_5" src="./assets/icons_table/thumbnails/thumbnail_5.png">
+					<img class="pause" id="pause_5" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(5)">
+					<img class="play" id="play_5" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(5)">
+					<img class="screenshot" id="screenshot_5" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_5" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Helping Enzo’s Photoshoot</a>
 				</div>
 			</div>
 
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/vBjh-Zr9S1E?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/vBjh-Zr9S1E?autoplay=1&rel=0', 6)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_6" src="./assets/icons_table/thumbnails/thumbnail_6.png">
+					<img class="thumbnail" id="thumbnail_6" alt="thumbnail_6" src="./assets/icons_table/thumbnails/thumbnail_6.png">
+					<img class="pause" id="pause_6" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(6)">
+					<img class="play" id="play_6" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(6)">
+					<img class="screenshot" id="screenshot_6" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_6" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Soccer Game</a>
 				</div>
 			</div>
 			
-			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/8B77WsSiZEQ?autoplay=1&rel=0')">
+			<div class="video_element" (click)="playVideo('https://www.youtube.com/embed/8B77WsSiZEQ?autoplay=1&rel=0', 7)">
 				<div class="video">
-					<img class="thumbnail" alt="thumbnail_7" src="./assets/icons_table/thumbnails/thumbnail_7.png">
+					<img class="thumbnail" id="thumbnail_7" alt="thumbnail_7" src="./assets/icons_table/thumbnails/thumbnail_7.png">
+					<img class="pause" id="pause_7" alt="pause" src="./assets/icons_table/pause.png" (click)="pause_play(7)">
+					<img class="play" id="play_7" alt="play" src="./assets/icons_table/play.svg" (click)="pause_play(7)">
+					<img class="screenshot" id="screenshot_7" alt="screenshot" src="./assets/icons_table/screenshot.png">
+					<img class="record" id="record_7" alt="record" src="./assets/icons_table/record.png">
 				</div>
 				<div class="video_title">
 					<a>Scare Stairs</a>

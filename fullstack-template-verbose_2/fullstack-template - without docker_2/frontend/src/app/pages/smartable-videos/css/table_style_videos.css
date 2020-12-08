@@ -139,21 +139,36 @@ body {
 	height: 23px;
 }
 
-#pause{
+.pause{
 	position: relative;
 	right: 240px;
 	bottom: 65px;
+	visibility: hidden;
 }
 
-
-#screenshot{
+.play{
 	position: relative;
-	right: 210px;
-	bottom: 8px;
+	width: 80px;
+	right: 310px;
+	bottom: 75px;
+	filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
+	visibility: hidden;
 }
 
-#record{
+.screenshot{
 	position: relative;
-	right: 200px;
+	right: 280px;
 	bottom: 8px;
+	visibility: hidden;
+}
+
+.record{
+	position: relative;
+	right: 267px;
+	bottom: 8px;
+	visibility: hidden;
+}
+
+.img{
+	cursor: pointer;
 }

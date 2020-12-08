@@ -13,13 +13,14 @@ export class SmartableVideosService{
         this.hostURI = environment.host;
     }
 
-    public playVideo(url){
-        console.log('yeeeahhh');
+    public playVideo(url, number){
+        console.log('yeeeahhh ' + number);
 
         return this.http.post(`${this.hostURI}/api/wallHome/playVideo`,
         {
             message: {
-                url: url
+                url: url,
+                number: number
             }
             , event: "play video"
         })
