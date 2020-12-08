@@ -30,7 +30,7 @@ export class TVProfileService {
                     fax: fax,
                     why: why
                 }
-                , event: "getting profile"
+                , event: "getting profile tv"
             })
     }
 }

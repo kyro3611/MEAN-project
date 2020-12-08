@@ -5,6 +5,7 @@ import { FilesController } from './files/files.controller';
 import { SocketEventsController } from './socket-events/socket-events.controller';
 import { ExampleController } from './example/example.controller';
 import { TVController } from './TV/TV.controller';
+import { SmartphoneController } from './smartphone/smartphone.controller';
 import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmartphone.controller';
 import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
 import { SmartphoneProfileController } from './smartphoneProfile/smartphoneProfile.controller';
@@ -49,6 +50,11 @@ apiV1Router
     new TVController().applyRoutes()
   )
 
+  .use(
+    '/smartphone',
+    new SmartphoneController().applyRoutes()
+  )
+  
   // smartphone home routes
   .use(
     '/homepageSmartphone',

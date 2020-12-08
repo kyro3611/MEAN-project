@@ -57,7 +57,7 @@ export class TVProfileComponent implements OnInit {
     this.points = player.points;
     this.fax = player.fax;
     this.why = player.why;
-    this.socketService.syncMessages("getting profile").subscribe(msg => {
+    this.socketService.syncMessages("getting profile tv").subscribe(msg => {
       this.socketEvents.push(msg);
     })
     this.getProfile();
