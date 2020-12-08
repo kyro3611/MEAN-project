@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import playersJson from '../../../../assets/playersJson.json';
 
 @Injectable({
     providedIn: 'root'
@@ -18,7 +17,7 @@ export class SmartphoneProfileService {
 
         console.log('and you know iiit bruh');
 
-        return this.http.post(`${this.hostURI}/api/smartphoneProfile/getProfile`,
+        return this.http.post(`${this.hostURI}/api/smartphone/getProfile`,
             {
                 message: {
                     img: img,
@@ -31,7 +30,7 @@ export class SmartphoneProfileService {
                     fax: fax,
                     why: why
                 }
-                , event: "getting profile"
+                , event: "getting profile smartphone"
             })
     }
 }
