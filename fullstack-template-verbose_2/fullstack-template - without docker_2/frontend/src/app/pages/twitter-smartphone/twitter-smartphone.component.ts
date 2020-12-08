@@ -35,6 +35,7 @@ export class TwitterSmartphoneComponent implements OnInit {
 
   }
 
+  /*send tweet*/
   public send() {
     this.tweet = { name: "wtf", txt: this.text_box.nativeElement.value };
     tweetsJson.unshift(this.tweet);
@@ -42,9 +43,12 @@ export class TwitterSmartphoneComponent implements OnInit {
 
   }
 
+  /**for function */
   public sendTweet() {
     this.TwitterSmartphoneS.sendTweet(tweetsJson).subscribe();
   }
+
+  /**for init */
   public sendTweet2() {
     console.log(tweetsJson);
     this.TwitterSmartphoneS.sendTweet2(tweetsJson).subscribe();

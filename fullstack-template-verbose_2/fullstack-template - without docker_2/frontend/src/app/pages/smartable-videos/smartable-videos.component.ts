@@ -19,6 +19,7 @@ export class SmartableVideosComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*play video to wall function */
   public playVideo(url){
     this.smartableVideosService.playVideo(url).subscribe();
   }

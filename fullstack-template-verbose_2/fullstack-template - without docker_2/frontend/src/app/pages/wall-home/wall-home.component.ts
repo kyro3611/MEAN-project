@@ -1,5 +1,5 @@
 import { Component, Renderer2, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ExampleService } from 'src/app/global/services/example/example.service';
+import { WallHomeService } from 'src/app/global/services/wallHome/wallHome.service';
 import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -14,7 +14,7 @@ export class WallHomeComponent implements OnInit {
 
   public socketEvents: {event: string, message: any}[];
 
-  constructor(private route:ActivatedRoute, private exampleService: ExampleService,
+  constructor(private route:ActivatedRoute, private wallHomeService: WallHomeService,
     private socketService: SocketsService, private renderer: Renderer2) {
       this.socketEvents = [];
   }
@@ -25,9 +25,9 @@ export class WallHomeComponent implements OnInit {
       console.log('playing video...');
       console.log(msg.message.url);
 
-      this.video.nativeElement.src = msg.message.url;
-      this.renderer.setStyle(this.video.nativeElement, 'visibility', 'visible');
-      this.renderer.setStyle(this.logo.nativeElement, 'visibility', 'hidden');
+      this.video.nativeElement.src = msg.message.url;                             /*set src as given url*/
+      this.renderer.setStyle(this.video.nativeElement, 'visibility', 'visible');  /*show iframe */
+      this.renderer.setStyle(this.logo.nativeElement, 'visibility', 'hidden');    /*hide logo */
     })
   }
 
