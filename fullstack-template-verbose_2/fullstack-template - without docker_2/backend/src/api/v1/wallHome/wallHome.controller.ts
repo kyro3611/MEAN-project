@@ -15,6 +15,7 @@ export class WallHomeController {
 
         router.post('/wallHome');
         router.post('/playVideo', this.playVideo);
+        router.post('/pause_play', this.pause_play);
         return router;
     }
     
@@ -22,6 +23,16 @@ export class WallHomeController {
         const message: string = req.body.message;
         const event: string = req.body.event;
         console.log('wall will play video');
+
+        // sending a broadcast message to all clients
+        const socketService = DIContainer.get(SocketsService);
+        socketService.broadcast(event, message);
+    }
+
+    public pause_play(req: Request, res: Response) {
+        const message: string = req.body.message;
+        const event: string = req.body.event;
+        console.log('video will pause or play');
 
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);

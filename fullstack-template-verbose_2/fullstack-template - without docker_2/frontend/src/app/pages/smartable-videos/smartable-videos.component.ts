@@ -18,7 +18,7 @@ export class SmartableVideosComponent implements OnInit {
   public current = 0;
 
   /**indicates if video is paused (1) or not (0) */
-  public paused = 0;
+  public paused;
 
   constructor(private route:ActivatedRoute, private smartableVideosService: SmartableVideosService,
     private socketService: SocketsService) {
@@ -33,8 +33,10 @@ export class SmartableVideosComponent implements OnInit {
     if(number !== this.current) {
       this.smartableVideosService.playVideo(url, number).subscribe();
 
-        /**set current */
+      /**set current */
       this.current=number;
+
+      this.paused = 0;
 
       /**show buttons (pause, screenshot, record) */
       (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility= 'visible';
@@ -63,6 +65,8 @@ export class SmartableVideosComponent implements OnInit {
   /**pause video */
   public pause_play(number){
     if(this.current === number){
+      this.smartableVideosService.pause_play(number).subscribe();
+
       /**visibilities */
       if(this.paused == 0 ){
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "hidden" ;
@@ -75,4 +79,5 @@ export class SmartableVideosComponent implements OnInit {
       }
     }
   }
+
 }

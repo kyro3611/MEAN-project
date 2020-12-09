@@ -25,4 +25,16 @@ export class SmartableVideosService{
             , event: "play video"
         })
     }
+
+    public pause_play(number){
+        console.log('pause/play');
+
+        return this.http.post(`${this.hostURI}/api/wallHome/pause_play`,
+        {
+            message: {
+                number: number
+            }
+            , event: "pause or play"
+        })
+    }
 }
