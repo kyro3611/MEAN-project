@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
-<body>
+<body *ngFor="let event of socketEvents">
     <header>
         <button id="homeb" class="navbuttons" routerLink='/TVHome'>
             <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
@@ -56,8 +56,8 @@
         </button>
         <div id="votesdiv">
             <div id="week"><b>Week 5</b></div>
-            <img id="votedphoto" src="./assets/images/players/nicole_a.png" alt="Nicole A. Photo">
-            <div id='voteddiv'>You voted for <span id="votedtxt"><b>Nicole A.</b></span><br>Thank you!
+            <img id="votedphoto" src="{{event.message.img}}" alt="Nicole A. Photo">
+            <div id='voteddiv'>You voted for <span id="votedtxt"><b>{{event.message.name}}</b></span><br>Thank you!
             </div>
         </div>
     </div>

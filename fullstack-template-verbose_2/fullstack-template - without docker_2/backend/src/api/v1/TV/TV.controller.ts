@@ -14,10 +14,20 @@ export class TVController {
         const router = Router();
 
         router.post('/getProfile', this.getProfile);
+        router.post('/voteCompleted', this.voteCompleted);
         return router;
     }
 
     public getProfile(req: Request, res: Response) {
+        const message: string = req.body.message;
+        const event: string = req.body.event;
+
+        // sending a broadcast message to all clients
+        const socketService = DIContainer.get(SocketsService);
+        socketService.broadcast(event, message);
+    }
+
+    public voteCompleted(req: Request, res: Response) {
         const message: string = req.body.message;
         const event: string = req.body.event;
 

@@ -14,7 +14,7 @@ export class SmartableVideosService{
     }
 
     public playVideo(url, number){
-        console.log('yeeeahhh ' + number);
+        console.log('Video ' + number);
 
         return this.http.post(`${this.hostURI}/api/wallHome/playVideo`,
         {

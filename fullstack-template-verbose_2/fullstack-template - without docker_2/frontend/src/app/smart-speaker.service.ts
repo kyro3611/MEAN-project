@@ -5,8 +5,10 @@
  *  - install artyom.js (npm i artyom.js)
  *  - add this file in src/app
  */
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import Artyom from '../../node_modules/artyom.js/build/artyom';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -83,4 +85,10 @@ export class SmartSpeakerService {
 
   /**********************/
 
+  /**vote a player with voice command */
+  public voteVoiceCommand(){
+    this.addCommand('Vote ' + ['Kevin', 'Cody', 'Nicole A.'],()=>{
+      /**TO BE FILLED */
+    })
+  }
 }
