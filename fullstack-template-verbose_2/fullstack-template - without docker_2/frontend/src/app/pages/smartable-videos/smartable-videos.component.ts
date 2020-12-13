@@ -30,8 +30,10 @@ export class SmartableVideosComponent implements OnInit {
 
   /*play video to wall function */
   public playVideo(url, number){
-    console.log('play video please');
-    if(number !== this.current) {
+    
+    if(number != this.current) {
+
+      console.log('play video please');
 
       /**set current */
       this.current=number;
@@ -67,21 +69,22 @@ export class SmartableVideosComponent implements OnInit {
 
   /**pause video */
   public pause_play(number){
-    console.log('pause or play please');
-    if(this.current === number){
+    
+    if(this.current == number){
       /**visibilities */
       if(this.paused == 0 ){
+        console.log('play please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "hidden" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "visible" ;
         this.paused = 1 ;
       } else {
+        console.log('pause please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "visible" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "hidden" ;
         this.paused = 0 ;
-
-        /**call pause_play() from service */
-        this.smartableVideosService.pause_play(number).subscribe();
       }
+      /**call pause_play() from service */
+      this.smartableVideosService.pause_play(number).subscribe();
     }
   }
 
