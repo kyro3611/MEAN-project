@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SmartableVideosService } from 'src/app/global/services/SmartableVideos/SmartableVideos.service';
 import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Console } from 'console';
 
 @Component({
   selector: 'ami-fullstack-tvlivestreams',
@@ -26,10 +27,32 @@ export class TVLivestreamsComponent implements OnInit {
   }
 
   ngOnInit() {
+     /*play video event listener*/
+     this.socketService.syncMessages("play video").subscribe(msg => {
+      
+      /**update video style and hide buttons if smartable called playVideo() */
+      if(msg.message.device != 2 && this.current!=0) {
+
+        console.log('nyees');
+
+        /**hide buttons (pause, screenshot, record) */
+        (<HTMLInputElement>document.getElementById("pause_"+this.previous)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("play_"+this.previous)).style.visibility = "hidden" ;
+        /**change border color of thumbnail */
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderColor= 'none';
+
+        /**reset previous */
+        this.previous = 0;
+
+        /**reset current */
+        this.current = 0;
+      }
+    })
   }
   
   /*play video to wall function */
-  public playVideo(url, number){
+  public playVideo(url, number, device){
       
     if(number != this.current) {
 
@@ -59,7 +82,7 @@ export class TVLivestreamsComponent implements OnInit {
       this.previous = number;
 
       /**call playVideo() from service */
-      this.smartableVideosService.playVideo(url, number).subscribe();
+      this.smartableVideosService.playVideo(url, number, device).subscribe();
     }
   }
 

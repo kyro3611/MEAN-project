@@ -26,10 +26,33 @@ export class SmartableVideosComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*play video event listener*/
+    this.socketService.syncMessages("play video").subscribe(msg => {
+
+      /**update video style and hide buttons if TV called playVideo() */
+      if(msg.message.device != 1 && this.current!=0) {
+
+        console.log('nyees');
+
+        /**hide buttons (pause, screenshot, record) */
+        (<HTMLInputElement>document.getElementById("pause_"+this.current )).style.visibility = 'hidden';
+        (<HTMLInputElement>document.getElementById("screenshot_"+this.current )).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("record_"+this.current )).style.visibility= 'hidden';
+        /**change border color of thumbnail */
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.current)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.current)).style.borderColor= 'none';
+
+        /**reset previous */
+        this.previous = 0;
+
+        /**reset current */
+        this.current = 0;
+      }
+    })
   }
 
   /*play video to wall function */
-  public playVideo(url, number){
+  public playVideo(url, number, device){
     
     if(number != this.current) {
 
@@ -63,7 +86,7 @@ export class SmartableVideosComponent implements OnInit {
       this.previous = number;
 
       /**call playVideo() from service */
-      this.smartableVideosService.playVideo(url, number).subscribe();
+      this.smartableVideosService.playVideo(url, number, device).subscribe();
     }
   }
 
