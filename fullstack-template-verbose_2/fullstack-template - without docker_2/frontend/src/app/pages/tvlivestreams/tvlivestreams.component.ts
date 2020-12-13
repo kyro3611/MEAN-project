@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SmartableVideosService } from 'src/app/global/services/SmartableVideos/SmartableVideos.service';
 import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Console } from 'console';
 
 @Component({
   selector: 'ami-fullstack-tvlivestreams',
