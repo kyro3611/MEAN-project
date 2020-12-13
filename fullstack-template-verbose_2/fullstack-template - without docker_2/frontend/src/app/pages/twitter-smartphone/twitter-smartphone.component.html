@@ -14,14 +14,12 @@
 		<h3>@CBSBigBrother</h3>
 	</div>
 
-	<div *ngFor="let event of socketEvents">
-		<div *ngFor="let t of event.message.tweets" class="twitter_container">
-			<div class="tweet_div">
-				<img class="tweet_icon" alt="tweet_icon_1" src="./assets/icons/tweeticon.svg">
-				<div class="tweet_text">
-					<h4>{{t.name}}</h4>
-					<p>{{t.txt}}</p>
-				</div>
+	<div class="twitter_container">
+		<div *ngFor="let t of globals.tweets" class="tweet_div">
+			<img class="tweet_icon" alt="tweet_icon_1" src="./assets/icons/tweeticon.svg">
+			<div class="tweet_text">
+				<h4>{{t.name}}</h4>
+				<p>{{t.txt}}</p>
 			</div>
 		</div>
 	</div>

@@ -13,29 +13,16 @@ export class TwitterSmartphoneService {
         this.hostURI = environment.host;
     }
 
-    public sendTweet(tweets) {
+    public sendTweet(tweet) {
 
         console.log('pempti fora den to deixnw bro');
 
         return this.http.post(`${this.hostURI}/api/smartphone/sendTweet`,
             {
                 message: {
-                    tweets: tweets
+                    tweet: tweet
                 }
                 , event: "send tweet"
-            })
-    }
-
-    public sendTweet2(tweets) {
-
-        console.log('pempti fora den to deixnw brooooooooooooo');
-
-        return this.http.post(`${this.hostURI}/api/smartphone/sendTweet`,
-            {
-                message: {
-                    tweets: tweets
-                }
-                , event: "send tweet2"
             })
     }
 }

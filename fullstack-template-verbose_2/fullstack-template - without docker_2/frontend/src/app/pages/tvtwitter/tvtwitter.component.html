@@ -46,64 +46,11 @@
             <img id="nexticon" class="nextprevicon" src="./assets/images/header/nexticon.svg" alt="Next Page Icon">
         </button>
         <div id="tweetsdiv">
-            <div class="tweetdiv">
+            <div *ngFor="let t of globals.tweets" class="tweetdiv">
                 <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
                 <div class="tweettxt">
-                    <h2>Chad</h2>
-                    <p>What a great episode &#128514;</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>John</h2>
-                    <p>Teleutaia trww healty
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Bill</h2>
-                    <p>NAIIII NAIIIIIIII Interdum et malesuada fames ac ante ipsum</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Christos</h2>
-                    <p>Ela reee big brother</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Papas</h2>
-                    <p>Crispy kremudaki Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed dui eget est
-                        venenatis tincidunt cursus ac libero. Interdum et malesuada fames ac ante ipsum primis in
-                        faucibus. Pellentesque in dui a lacus faucibus finibus. Orci varius natoque penatibus et magnis
-                        dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Baggelo</h2>
-                    <p>Ti kaneiiiiiiiiiiiiiii</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Chris</h2>
-                    <p>Eeeeela re boiii Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-                        ridiculus mus.</p>
-                </div>
-            </div>
-            <div class="tweetdiv">
-                <img class="tweeticon" src="./assets/images/twitter/tweeticon.svg" alt="Tweet Icon">
-                <div class="tweettxt">
-                    <h2>Stathis</h2>
-                    <p>Na sou kanw mia traka</p>
+                    <h2>{{t.name}}</h2>
+                    <p>{{t.txt}}</p>
                 </div>
             </div>
         </div>

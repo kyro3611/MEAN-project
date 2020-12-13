@@ -2,8 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SocketsService } from 'src/app/global/services';
 import { Router } from '@angular/router';
 import { TwitterSmartphoneService } from 'src/app/global/services/twitterSmartphone/twitterSmartphone.service';
-import tweetsJson from '../../../assets/tweetsJson.json';
-
+import { Globals } from '../globals'
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'ami-fullstack-twitter-smartphone',
@@ -16,51 +16,34 @@ export class TwitterSmartphoneComponent implements OnInit {
 
   public tweet;
   public socketEvents: { event: string, message: any }[];
+  subscription: Subscription;
+
 
   constructor(private router: Router, private TwitterSmartphoneS: TwitterSmartphoneService,
-    private socketService: SocketsService) {
+    private socketService: SocketsService, private globals: Globals) {
     this.socketEvents = [];
   }
 
   ngOnInit() {
-    this.socketService.syncMessages("send tweet2").subscribe(msg => {
-      this.socketEvents.push(msg);
+    this.subscription = this.socketService.syncMessages("send tweet").subscribe(msg => {
+      this.globals.tweets.unshift(msg.message.tweet);
+      console.log(this.globals.tweets);
     })
-    this.socketService.syncMessages("send tweet").subscribe(msg => {
-      this.socketEvents.push(msg);
-      this.redirectTo('/twitterSmartphone');
-    })
-    this.sendTweet2();
-    // this.sendTweet();
+  }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   /*send tweet*/
   public send() {
     this.tweet = { name: "wtf", txt: this.text_box.nativeElement.value };
-    tweetsJson.unshift(this.tweet);
+    this.text_box.nativeElement.value = "";
     this.sendTweet();
-
   }
 
-  /**for function */
+  /*call service function */
   public sendTweet() {
-    this.TwitterSmartphoneS.sendTweet(tweetsJson).subscribe();
-  }
-
-  /**for init */
-  public sendTweet2() {
-    console.log(tweetsJson);
-    this.TwitterSmartphoneS.sendTweet2(tweetsJson).subscribe();
-  }
-
-  redirectTo(uri: string) {
-    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
-      this.router.navigate([uri]));
-  }
-  trackByFn(index, t) {
-    console.log(index);
-    return index; // or item.id
-
+    this.TwitterSmartphoneS.sendTweet(this.tweet).subscribe();
   }
 }

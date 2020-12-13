@@ -50,6 +50,7 @@ body::-webkit-scrollbar { /* WebKit */
     height: 17vh;
     background-color: white;
     margin-bottom: 3%;
+    position: relative;
 }
 
 h4{
@@ -77,9 +78,8 @@ tr{
 .tweet_icon{
     position: absolute;
     margin-left: 1%;
-    height: 6%;
-    width: 7%;
-    margin-top: -4%;
+    height: 23%;
+    margin-top: 2%;
     filter: invert(14%) sepia(10%) saturate(5469%) hue-rotate(194deg) brightness(90%) contrast(115%);
 }
 

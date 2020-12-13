@@ -24,6 +24,7 @@ import { SmartphoneProfileComponent } from './pages/smartphone-profile/smartphon
 import { VoteDoneSmartphoneComponent } from './pages/vote-done-smartphone/vote-done-smartphone.component';
 import { WallHomeComponent } from './pages/wall-home/wall-home.component';
 import { TVVotedoneComponent } from './pages/tvvotedone/tvvotedone.component';
+import { Globals } from './pages/globals';
 
 
 @NgModule({
@@ -70,16 +71,16 @@ import { TVVotedoneComponent } from './pages/tvvotedone/tvvotedone.component';
       { path: 'twitterSmartphone', component: TwitterSmartphoneComponent },
       { path: 'voteSmartphone', component: VoteSmartphoneComponent },
       { path: 'voteSmartphone/:name', component: VoteDoneSmartphoneComponent },
-      { path: 'voteDoneSmartphone', component: VoteDoneSmartphoneComponent},
+      { path: 'voteDoneSmartphone', component: VoteDoneSmartphoneComponent },
       { path: 'smartphonePlayers', component: SmartphonePlayersComponent },
       { path: 'smartphoneProfile', component: SmartphoneProfileComponent },
       { path: 'smartphonePlayers/:name', component: SmartphoneProfileComponent },
-      { path: 'smartableHome', component: SmartableHomeComponent},
-      { path: 'smartableVideos', component: SmartableVideosComponent},
-      { path: 'wallHome', component: WallHomeComponent}
+      { path: 'smartableHome', component: SmartableHomeComponent },
+      { path: 'smartableVideos', component: SmartableVideosComponent },
+      { path: 'wallHome', component: WallHomeComponent }
     ])
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
