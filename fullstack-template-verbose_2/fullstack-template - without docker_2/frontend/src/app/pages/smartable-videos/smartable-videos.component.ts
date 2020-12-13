@@ -73,12 +73,12 @@ export class SmartableVideosComponent implements OnInit {
     if(this.current == number){
       /**visibilities */
       if(this.paused == 0 ){
-        console.log('play please');
+        console.log('pause please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "hidden" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "visible" ;
         this.paused = 1 ;
       } else {
-        console.log('pause please');
+        console.log('play please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "visible" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "hidden" ;
         this.paused = 0 ;

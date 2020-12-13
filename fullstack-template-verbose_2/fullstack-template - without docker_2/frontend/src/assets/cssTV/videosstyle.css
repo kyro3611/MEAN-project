@@ -104,3 +104,23 @@
     top: 400px;
     left: 570px;
 }
+
+.pause{
+	position: relative;
+	right: -140px;
+    top: -165px;
+    visibility: hidden;
+}
+
+.play{
+	position: relative;
+	width: 80px;
+	right: -80px;
+	top: -175px;
+    filter: invert(96%) sepia(3%) saturate(1320%) hue-rotate(167deg) brightness(100%) contrast(98%);
+    visibility: hidden;
+}
+
+.img{
+	cursor: pointer;
+}
