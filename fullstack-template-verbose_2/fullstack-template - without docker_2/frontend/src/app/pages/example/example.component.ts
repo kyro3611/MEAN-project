@@ -27,7 +27,6 @@ export class ExampleComponent implements OnInit {
     this.socketService.syncMessages("treating").subscribe(msg => {
       this.socketEvents.push(msg);
     })
-    this.treatSomeone();
   }
 
   public treatSomeone(){

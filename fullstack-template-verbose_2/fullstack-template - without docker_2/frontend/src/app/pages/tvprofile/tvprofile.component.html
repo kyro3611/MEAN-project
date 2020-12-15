@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
-<body *ngFor="let event of socketEvents">
+<body>
     <header>
         <button id="homeb" class="navbuttons" routerLink='/TVHome'>
             <img id="homeicon" class="icons" src="./assets/images/header/homeicon.svg" alt="Home Icon">
@@ -64,25 +64,27 @@
             <img id="backicon" src="./assets/images/players/backicon.svg" alt="Back Icon">
             <span id="backtxt"> Back to players list</span>
         </button>
-        <div id="photodiv">
-            <img #profimg id="infophoto" src={{event.message.img}} alt="">
-            <div #name id="phototxt"><b>{{event.message.name}}</b></div>
-        </div>
-        <div id="infodiv">
-            <span><b>Age:</b></span>
-            <span #age id="agetxt">{{event.message.age}}</span><br>
-            <span><b>Hometown:</b></span>
-            <span #hometown id="hometowntxt">{{event.message.hometown}}</span><br>
-            <span><b>Current city:</b></span>
-            <span #city id="currentcitytxt">{{event.message.city}}</span><br>
-            <span><b>Occupation:</b></span>
-            <span #occupation id="occupationtxt">{{event.message.occupation}}</span><br>
-            <span><b>Points:</b></span>
-            <span #points id="pointstxt">{{event.message.points}}</span><br><br>
-            <span><b>Fun facts about yourself:</b></span><br>
-            <span #fax id="faxtxt">{{event.message.fax}}</span><br><br>
-            <span><b>Why do you want to play Big Brother?</b></span><br>
-            <span #why id="whytxt">{{event.message.why}}</span><br>
+        <div *ngFor="let event of socketEvents">
+            <div id="photodiv">
+                <img #profimg id="infophoto" src={{event.message.img}} alt="">
+                <div #name id="phototxt"><b>{{event.message.name}}</b></div>
+            </div>
+            <div id="infodiv">
+                <span><b>Age:</b></span>
+                <span #age id="agetxt">{{event.message.age}}</span><br>
+                <span><b>Hometown:</b></span>
+                <span #hometown id="hometowntxt">{{event.message.hometown}}</span><br>
+                <span><b>Current city:</b></span>
+                <span #city id="currentcitytxt">{{event.message.city}}</span><br>
+                <span><b>Occupation:</b></span>
+                <span #occupation id="occupationtxt">{{event.message.occupation}}</span><br>
+                <span><b>Points:</b></span>
+                <span #points id="pointstxt">{{event.message.points}}</span><br><br>
+                <span><b>Fun facts about yourself:</b></span><br>
+                <span #fax id="faxtxt">{{event.message.fax}}</span><br><br>
+                <span><b>Why do you want to play Big Brother?</b></span><br>
+                <span #why id="whytxt">{{event.message.why}}</span><br>
+            </div>
         </div>
     </div>
 </body>
