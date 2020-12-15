@@ -30,9 +30,9 @@ export class SmartphoneController {
     public sendTweet(req: Request, res: Response) {
         const message: string = req.body.message;
         const event: string = req.body.event;
-        console.log(message);
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ela re tweet' });
     }
 }

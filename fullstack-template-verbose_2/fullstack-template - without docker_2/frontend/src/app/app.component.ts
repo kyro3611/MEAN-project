@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SocketsService } from './global/services';
+import { Globals } from './pages/globals';
 
 @Component({
   selector: 'ami-fullstack-root',
@@ -8,17 +9,21 @@ import { SocketsService } from './global/services';
 })
 export class AppComponent {
 
-  constructor(private socketsService: SocketsService) {
+  constructor(private socketService: SocketsService, private globals: Globals) {
     // Connect to sockets server on startup
-    this.socketsService.initAndConnect();
-
-
-
+    this.socketService.initAndConnect();
 
     //How to consume an event
-    this.socketsService.syncMessages('eventName').subscribe((data)=>{
+    this.socketService.syncMessages('eventName').subscribe((data) => {
       console.log('The message i received for this event is: ', data);
     });
-    
+
+  }
+
+  ngOnInit() {
+    this.socketService.syncMessages("send tweet").subscribe(msg => {
+      this.globals.tweets.unshift(msg.message.tweet);
+      console.log(this.globals.tweets);
+    })
   }
 }

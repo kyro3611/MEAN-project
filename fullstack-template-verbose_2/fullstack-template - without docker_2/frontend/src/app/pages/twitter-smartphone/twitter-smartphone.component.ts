@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { SocketsService } from 'src/app/global/services';
-import { Router } from '@angular/router';
 import { TwitterSmartphoneService } from 'src/app/global/services/twitterSmartphone/twitterSmartphone.service';
 import { Globals } from '../globals'
 import { Subscription } from 'rxjs';
@@ -15,24 +13,12 @@ export class TwitterSmartphoneComponent implements OnInit {
   @ViewChild('text_box', { static: false }) public text_box: ElementRef;
 
   public tweet;
-  public socketEvents: { event: string, message: any }[];
   subscription: Subscription;
 
-
-  constructor(private router: Router, private TwitterSmartphoneS: TwitterSmartphoneService,
-    private socketService: SocketsService, private globals: Globals) {
-    this.socketEvents = [];
+  constructor(private TwitterSmartphoneS: TwitterSmartphoneService, private globals: Globals) {
   }
 
   ngOnInit() {
-    this.subscription = this.socketService.syncMessages("send tweet").subscribe(msg => {
-      this.globals.tweets.unshift(msg.message.tweet);
-      console.log(this.globals.tweets);
-    })
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
   /*send tweet*/

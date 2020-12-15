@@ -25,6 +25,7 @@ export class TVController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ela re profile' });
     }
 
     public voteCompleted(req: Request, res: Response) {
@@ -34,5 +35,6 @@ export class TVController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ela re vote' });
     }
 }
