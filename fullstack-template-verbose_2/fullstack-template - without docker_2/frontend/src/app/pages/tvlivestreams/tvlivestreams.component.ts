@@ -12,6 +12,8 @@ import { Globals } from '../globals';
 export class TVLivestreamsComponent implements OnInit {
   public socketEvents: { event: string, message: any }[];
 
+  public previousVideo=0;
+
   constructor(private route:ActivatedRoute, private smartableVideosService: SmartableVideosService,
     private socketService: SocketsService, private globals: Globals) {
       this.socketEvents = [];
@@ -26,14 +28,15 @@ export class TVLivestreamsComponent implements OnInit {
 
         console.log('nyees');
 
-        /**hide buttons (pause, screenshot, record) */
-        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("play_"+this.globals.previousVideo)).style.visibility = "hidden" ;
-        /**change border color of thumbnail */
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
-
-        this.globals.currentVideoPlayer = msg.message.device;
+        if(this.previousVideo > 0){
+          /**hide buttons (pause, screenshot, record) */
+          (<HTMLInputElement>document.getElementById("pause_"+this.previousVideo)).style.visibility= 'hidden';
+          (<HTMLInputElement>document.getElementById("play_"+this.previousVideo)).style.visibility = "hidden" ;
+          /**change border color of thumbnail */
+          (<HTMLInputElement>document.getElementById("thumbnail_"+this.previousVideo)).style.borderStyle= 'none';
+          (<HTMLInputElement>document.getElementById("thumbnail_"+this.previousVideo)).style.borderColor= 'none';
+        }
+  
       }
     })
 
@@ -72,15 +75,15 @@ export class TVLivestreamsComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("thumbnail_"+number)).style.borderColor= '#DB00FF';
 
       /**reset previously played video */
-      if(this.globals.previousVideo > 0){
-        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("play_"+this.globals.previousVideo)).style.visibility = "hidden" ;
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
+      if(this.previousVideo > 0){
+        (<HTMLInputElement>document.getElementById("pause_"+this.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("play_"+this.previousVideo)).style.visibility = "hidden" ;
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previousVideo)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previousVideo)).style.borderColor= 'none';
       }
 
       /**set previous */
-      this.globals.previousVideo = number;
+      this.previousVideo = number;
 
       /**call playVideo() from service */
       this.smartableVideosService.playVideo(url, number, device).subscribe();
@@ -96,12 +99,10 @@ export class TVLivestreamsComponent implements OnInit {
         console.log('pause please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "hidden" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "visible" ;
-        this.globals.paused = 1 ;
       } else {
         console.log('play please');
         (<HTMLInputElement>document.getElementById("pause_"+number)).style.visibility = "visible" ;
         (<HTMLInputElement>document.getElementById("play_"+number)).style.visibility = "hidden" ;
-        this.globals.paused = 0 ;
       }
       /**call pause_play() from service */
       this.smartableVideosService.pause_play(number).subscribe();

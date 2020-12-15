@@ -25,5 +25,23 @@ export class AppComponent {
       this.globals.tweets.unshift(msg.message.tweet);
       console.log(this.globals.tweets);
     })
+
+    /*play video event listener*/
+    this.socketService.syncMessages("play video").subscribe(msg => {
+      /**update current video player (device)*/
+      this.globals.paused = 0;
+      this.globals.currentVideoPlayer = msg.message.device;
+      this.globals.currentVideo = msg.message.number;
+    })
+
+    /*pause/play video event listener*/
+    this.socketService.syncMessages("pause or play").subscribe(msg =>{
+      /**update global paused variable*/
+      if(this.globals.paused == 0){
+        this.globals.paused = 1;
+      } else{
+        this.globals.paused = 0;
+      }
+    })
   }
 }

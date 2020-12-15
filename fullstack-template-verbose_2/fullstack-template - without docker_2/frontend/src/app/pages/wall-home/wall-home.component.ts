@@ -36,7 +36,6 @@ export class WallHomeComponent implements OnInit {
     /*pause or play video event*/
     this.socketService.syncMessages("pause or play").subscribe(msg => {
       var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
-      iframe
       if(this.paused == 0 ){
         this.paused = 1;
         console.log('video paused');
