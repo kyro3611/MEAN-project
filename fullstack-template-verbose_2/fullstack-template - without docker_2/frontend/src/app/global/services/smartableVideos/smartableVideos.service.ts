@@ -33,7 +33,7 @@ export class SmartableVideosService{
         return this.http.post(`${this.hostURI}/api/wallHome/pause_play`,
         {
             message: {
-                number: number
+                number: number,
             }
             , event: "pause or play"
         })
