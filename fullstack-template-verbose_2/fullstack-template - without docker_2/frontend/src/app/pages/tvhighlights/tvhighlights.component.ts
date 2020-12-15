@@ -30,14 +30,13 @@ export class TVHighlightsComponent implements OnInit {
         console.log('nyees');
 
         /**hide buttons (pause, screenshot, record) */
-        (<HTMLInputElement>document.getElementById("pause_"+this.previous)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("play_"+this.previous)).style.visibility = "hidden" ;
+        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("play_"+this.globals.previousVideo)).style.visibility = "hidden" ;
         /**change border color of thumbnail */
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderColor= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
 
-        /**reset previous */
-        this.previous = 0;
+        this.globals.currentVideoPlayer = msg.message.device;
       }
     })
 
@@ -76,15 +75,15 @@ export class TVHighlightsComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("thumbnail_"+number)).style.borderColor= '#DB00FF';
 
       /**reset previously played video */
-      if(this.previous > 0){
-        (<HTMLInputElement>document.getElementById("pause_"+this.previous)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("play_"+this.previous)).style.visibility = "hidden" ;
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderColor= 'none';
+      if(this.globals.previousVideo > 0){
+        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("play_"+this.globals.previousVideo)).style.visibility = "hidden" ;
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
       }
 
       /**set previous */
-      this.previous = number;
+      this.globals.previousVideo = number;
 
       /**call playVideo() from service */
       this.smartableVideosService.playVideo(url, number, device).subscribe();

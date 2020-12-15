@@ -12,9 +12,6 @@ import { Globals } from '../globals';
 export class SmartableVideosComponent implements OnInit {
   public socketEvents: { event: string, message: any }[];
 
-  /**previous playing video number */
-  public previous = 0;
-
   constructor(private route:ActivatedRoute, private smartableVideosService: SmartableVideosService,
     private socketService: SocketsService, private globals: Globals) {
       this.socketEvents = [];
@@ -30,20 +27,18 @@ export class SmartableVideosComponent implements OnInit {
         console.log('nyees');
 
         /**hide buttons (pause, screenshot, record) */
-        (<HTMLInputElement>document.getElementById("pause_"+this.previous )).style.visibility = 'hidden';
-        (<HTMLInputElement>document.getElementById("screenshot_"+this.previous )).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("record_"+this.previous )).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo )).style.visibility = 'hidden';
+        (<HTMLInputElement>document.getElementById("screenshot_"+this.globals.previousVideo )).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("record_"+this.globals.previousVideo )).style.visibility= 'hidden';
         /**change border color of thumbnail */
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderColor= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
 
-        /**reset previous */
-        this.previous = 0;
+        this.globals.currentVideoPlayer = msg.message.device;
       }
     })
 
     if(this.globals.currentVideoPlayer == 1){
-
       /**show buttons (pause/play, screenshot, record) */
       if(this.globals.paused == 0){
         (<HTMLInputElement>document.getElementById("pause_"+this.globals.currentVideo)).style.visibility= 'visible';
@@ -82,17 +77,17 @@ export class SmartableVideosComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("thumbnail_"+number)).style.borderColor= '#DB00FF';
 
       /**reset previously played video */
-      if(this.previous > 0){
-        (<HTMLInputElement>document.getElementById("pause_"+this.previous)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("play_"+this.previous)).style.visibility = "hidden" ;
-        (<HTMLInputElement>document.getElementById("screenshot_"+this.previous)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("record_"+this.previous)).style.visibility= 'hidden';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderStyle= 'none';
-        (<HTMLInputElement>document.getElementById("thumbnail_"+this.previous)).style.borderColor= 'none';
+      if(this.globals.previousVideo > 0){
+        (<HTMLInputElement>document.getElementById("pause_"+this.globals.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("play_"+this.globals.previousVideo)).style.visibility = "hidden" ;
+        (<HTMLInputElement>document.getElementById("screenshot_"+this.globals.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("record_"+this.globals.previousVideo)).style.visibility= 'hidden';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderStyle= 'none';
+        (<HTMLInputElement>document.getElementById("thumbnail_"+this.globals.previousVideo)).style.borderColor= 'none';
       }
 
       /**set previous */
-      this.previous = number;
+      this.globals.previousVideo = number;
 
       /**call playVideo() from service */
       this.smartableVideosService.playVideo(url, number, device).subscribe();
@@ -101,9 +96,6 @@ export class SmartableVideosComponent implements OnInit {
 
   /**pause video */
   public pause_play(number){
-    console.log(this.globals.currentVideo);
-    console.log(this.globals.currentVideoPlayer);
-    console.log(this.globals.paused);
     if(this.globals.currentVideo == number && this.globals.currentVideoPlayer == 1){
       /**visibilities */
       if(this.globals.paused == 0 ){
