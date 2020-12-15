@@ -27,6 +27,7 @@ export class WallHomeController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ok' });
     }
 
     public pause_play(req: Request, res: Response) {
@@ -37,5 +38,6 @@ export class WallHomeController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ok' });
     }
 }
