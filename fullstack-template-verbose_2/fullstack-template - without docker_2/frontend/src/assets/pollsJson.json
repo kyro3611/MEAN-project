@@ -1,0 +1,62 @@
+[
+    [
+        {
+            "img": "./assets/images/players/bayleigh.png",
+            "name": "Bayleigh",
+            "percentage": "40%",
+            "rip": ""
+        },
+        {
+            "img": "./assets/images/players/davonne.png",
+            "name": "Davonne",
+            "percentage": "40%",
+            "rip": ""
+        },
+        {
+            "img": "./assets/images/players/dani.png",
+            "name": "Dani",
+            "percentage": "20%",
+            "rip": "./assets/images/players/ripicon.svg"
+        }
+    ],
+    [
+        {
+            "img": "./assets/images/players/memphis.png",
+            "name": "Memphis",
+            "percentage": "5%",
+            "rip": "./assets/images/players/ripicon.svg"
+        },
+        {
+            "img": "./assets/images/players/ian.png",
+            "name": "Ian",
+            "percentage": "60%",
+            "rip": ""
+        },
+        {
+            "img": "./assets/images/players/kaysar.png",
+            "name": "Kaysar",
+            "percentage": "35%",
+            "rip": ""
+        }
+    ],
+    [
+        {
+            "img": "./assets/images/players/david.png",
+            "name": "David",
+            "percentage": "50%",
+            "rip": ""
+        },
+        {
+            "img": "./assets/images/players/tyler.png",
+            "name": "Tyler",
+            "percentage": "15%",
+            "rip": "./assets/images/players/ripicon.svg"
+        },
+        {
+            "img": "./assets/images/players/cody.png",
+            "name": "Cody",
+            "percentage": "35%",
+            "rip": ""
+        }
+    ]
+]

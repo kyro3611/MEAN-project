@@ -1,26 +1,27 @@
-#pollicon{
+#pollicon {
     filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
 }
 
-#pollb:hover{
+#pollb:hover {
     background-color: transparent;
 }
 
-#polldiv{
+#polldiv {
     position: absolute;
-    left:151px;
-    top:170px;
+    left: 151px;
+    top: 170px;
     font-size: 1.3em;
     font-weight: bold;
-    width:1440px;
+    width: 1440px;
+    z-index: 1;
 }
 
-#week{
+#week {
     margin-bottom: 20px;
     margin-left: 180px;
 }
 
-.percentagediv{
+.percentagediv {
     position: relative;
     text-align: center;
     height: 640px;
@@ -28,35 +29,65 @@
     margin-left: 180px;
 }
 
-.rectangle{
+.rectangle {
     height: 50px;
     width: 300px;
-    background-color: #E2F2FB;
+    background-color: #e2f2fb;
     border-radius: 0px 0px 20px 20px;
 }
 
-.percentagephotodiv{
+.percentagephotodiv {
     overflow: hidden;
     width: 300px;
     height: 490px;
+}
+
+.percentagephoto {
+    width: 300px;
+    height: 440px;
+    margin-top: 20px;
     border-radius: 20px 20px 0px 0px;
 }
 
-.percentagephoto{
-    width: 300px;
-    margin-top: 0px;
-}
-
-.percentagenum{
+.percentagenum {
+    margin-top: -30px;
     color: black;
 }
 
-.percentagetxt{
+.percentagetxt {
     margin-top: 10px;
 }
 
-.ripicon{
+.ripicon {
     position: absolute;
-    top:21px;
-    left:23px;
+    height: 430px;
+    top: 25px;
+    left: 28px;
+}
+
+.updownicon {
+    height: 40px;
+    filter: invert(100%) sepia(64%) saturate(1464%) hue-rotate(174deg) brightness(103%) contrast(97%);
+    padding: 20px;
+    z-index: 2;
+}
+
+#downb {
+    position: absolute;
+    top: 825px;
+    left: 50%;
+    z-index: 2;
+    margin-left: -30px;
+}
+
+#upb {
+    position: absolute;
+    left: 50%;
+    top: 145px;
+    z-index: 2;
+    margin-left: -35px;
+}
+
+#prevb {
+    z-index: 2;
 }

@@ -6,14 +6,8 @@ import { SocketEventsController } from './socket-events/socket-events.controller
 import { ExampleController } from './example/example.controller';
 import { TVController } from './TV/TV.controller';
 import { SmartphoneController } from './smartphone/smartphone.controller';
-import { HomepageSmartphoneController } from './homepageSmartphone/homepageSmartphone.controller';
 import { SmartphonePlayersController } from './smartphonePlayers/smartphonePlayers.controller';
-import { SmartphoneProfileController } from './smartphoneProfile/smartphoneProfile.controller';
-import { TwitterSmartphoneController } from './twitterSmartphone/twitterSmartphone.controller';
-import { VoteSmartphoneController } from './voteSmartphone/voteSmartphone.controller';
 import { VoteDoneSmartphoneController } from './voteDoneSmartphone/voteDoneSmartphone.controller';
-import { SmartableHomeController } from './smartableHome/smartableHome.controller';
-import { SmartableVideosController } from './smartableVideos/smartableVideos.controller';
 import { WallHomeController } from './wallHome/wallHome.controller';
 
 
@@ -55,11 +49,6 @@ apiV1Router
     new SmartphoneController().applyRoutes()
   )
   
-  // smartphone home routes
-  .use(
-    '/homepageSmartphone',
-    new HomepageSmartphoneController().applyRoutes()
-  )
 
   // smartphone players routes
   .use(
@@ -69,38 +58,8 @@ apiV1Router
 
   // smartphone players routes
   .use(
-    '/smartphoneProfile',
-    new SmartphoneProfileController().applyRoutes()
-  )
-
-  // twitter smartphone routes
-  .use(
-    '/twitterSmartphone',
-    new TwitterSmartphoneController().applyRoutes()
-  )
-
-  // vote smartphone routes
-  .use(
-    '/voteSmartphone',
-    new VoteSmartphoneController().applyRoutes()
-  )
-
-  // smartphone players routes
-  .use(
     '/voteDoneSmartphone',
     new VoteDoneSmartphoneController().applyRoutes()
-  )
-
-  // smartable home
-  .use(
-    '/smartableHome',
-    new SmartableHomeController().applyRoutes()
-  )
-
-  // smartable videos
-  .use(
-    '/smartableVideos',
-    new SmartableVideosController().applyRoutes()
   )
 
   // wall home

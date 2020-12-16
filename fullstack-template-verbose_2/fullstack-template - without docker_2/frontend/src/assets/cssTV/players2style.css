@@ -16,6 +16,7 @@
     position: absolute;
     left:111px;
     top:170px;
+    z-index: 1;
 }
 
 .votediv{
@@ -61,4 +62,8 @@
 #commanddiv{
     margin-top: -60px;
     margin-left: 220px;
+}
+
+#prevb {
+    z-index: 2;
 }

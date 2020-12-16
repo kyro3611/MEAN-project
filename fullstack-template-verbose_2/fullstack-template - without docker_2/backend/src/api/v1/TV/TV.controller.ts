@@ -15,17 +15,26 @@ export class TVController {
 
         router.post('/getProfile', this.getProfile);
         router.post('/voteCompleted', this.voteCompleted);
+        router.post('/getPolls', this.getPolls);
         return router;
     }
 
     public getProfile(req: Request, res: Response) {
         const message: string = req.body.message;
         const event: string = req.body.event;
-
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
         res.json({ message: 'ela re profile' });
+    }
+
+    public getPolls(req: Request, res: Response) {
+        const message: string = req.body.message;
+        const event: string = req.body.event;
+        // sending a broadcast message to all clients
+        const socketService = DIContainer.get(SocketsService);
+        socketService.broadcast(event, message);
+        res.json({ message: 'ela re polls' });
     }
 
     public voteCompleted(req: Request, res: Response) {
