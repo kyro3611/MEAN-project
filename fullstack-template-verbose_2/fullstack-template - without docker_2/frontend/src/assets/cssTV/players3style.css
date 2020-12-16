@@ -91,3 +91,28 @@
 #prevb {
     z-index: 2;
 }
+
+.updownb{
+    width: 60px;
+    height: 60px;
+}
+
+.updownb{
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    outline: none;
+}
+
+.updownb:hover{
+    filter: invert(60%) sepia(67%) saturate(1761%) hue-rotate(183deg) brightness(103%) contrast(106%);
+}
+
+#upb:active{
+    transform: translateY(-10px);
+}
+
+#downb:active{
+    transform: translateY(10px);
+}

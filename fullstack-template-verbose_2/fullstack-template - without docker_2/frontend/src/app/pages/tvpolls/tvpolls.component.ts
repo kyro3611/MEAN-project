@@ -23,6 +23,7 @@ export class TVPollsComponent implements OnInit {
       this.socketEvents.push(msg);
     })
     this.getPolls(this.week);
+    (<HTMLInputElement>document.getElementById("upb")).style.visibility = "hidden";
   }
 
   public getPolls(wee) {
@@ -35,15 +36,19 @@ export class TVPollsComponent implements OnInit {
     if (x == 1) {           /**next */
       if (this.week < pollsJson.length - 1) {
         this.week++;
-      } else {
-        this.week = 0
       }
     } else if (x == -1) {   /**previous */
       if (this.week > 0) {
         this.week--;
-      } else {
-        this.week = pollsJson.length - 1
       }
+    }
+    if (this.week == pollsJson.length - 1) {
+      (<HTMLInputElement>document.getElementById("upb")).style.visibility = "hidden";
+    } else if (this.week == 0) {
+      (<HTMLInputElement>document.getElementById("downb")).style.visibility = "hidden";
+    } else {
+      (<HTMLInputElement>document.getElementById("downb")).style.visibility = "visible";
+      (<HTMLInputElement>document.getElementById("upb")).style.visibility = "visible";
     }
     this.socketEvents = [];
     this.getPolls(this.week);
