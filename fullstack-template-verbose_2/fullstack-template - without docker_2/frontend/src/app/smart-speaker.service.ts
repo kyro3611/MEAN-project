@@ -74,7 +74,7 @@ export class SmartSpeakerService {
     var command = typeof (text) === 'string' ? [text] : text;
 
     var newCommand = {
-      smart:true,
+      smart: true,
       indexes: command,
       action: (i, wildcard) => {
         onVoiceRecognition(i, wildcard);
@@ -91,10 +91,17 @@ export class SmartSpeakerService {
   public voteVoiceCommand(){
     this.addCommand('Vote for *' ,(i, wildcard)=>{
       /**if the second argument (wildcard) is valid vote this player */
-      if(wildcard == 'Cody' || wildcard == 'Kevin' || wildcard == 'Nicole A.'){
-        this.TVVoteDoneService.votePlayer(wildcard+".jpg", " " + wildcard).subscribe();
+      if(wildcard == 'kodi' || wildcard == 'kevin' || wildcard == 'nicole'){
+        if(wildcard == 'nicole'){
+          this.TVVoteDoneService.votePlayer("./assets/images/players/nicole_a.png", "Nicole A.").subscribe();
+        } else if(wildcard == 'kodi'){
+          this.TVVoteDoneService.votePlayer("./assets/images/players/cody.png", "Cody").subscribe();
+        } else {
+          this.TVVoteDoneService.votePlayer("./assets/images/players/"+wildcard+".png", "Kevin").subscribe();
+        }
       } else {
         console.log('Wrong name');
+        console.log(wildcard);
       }
     })
   }

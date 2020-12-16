@@ -40,6 +40,8 @@ export class TVController {
     public voteCompleted(req: Request, res: Response) {
         const message: string = req.body.message;
         const event: string = req.body.event;
+        
+        console.log(message);
 
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
