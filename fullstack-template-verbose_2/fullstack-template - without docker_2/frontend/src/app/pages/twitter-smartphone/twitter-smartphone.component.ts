@@ -23,7 +23,7 @@ export class TwitterSmartphoneComponent implements OnInit {
 
   /*send tweet*/
   public send() {
-    this.tweet = { name: "wtf", txt: this.text_box.nativeElement.value };
+    this.tweet = { name: "Christos", txt: this.text_box.nativeElement.value };
     this.text_box.nativeElement.value = "";
     this.sendTweet();
   }

@@ -25,6 +25,7 @@ export class SmartphoneController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ela re profile' });
     }
 
     public sendTweet(req: Request, res: Response) {

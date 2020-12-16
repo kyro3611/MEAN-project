@@ -25,5 +25,6 @@ export class VoteDoneSmartphoneController {
         // sending a broadcast message to all clients
         const socketService = DIContainer.get(SocketsService);
         socketService.broadcast(event, message);
+        res.json({ message: 'ela re vote' });
     }
 }

@@ -104,4 +104,8 @@ export class SmartphoneProfileComponent implements OnInit {
       this.location.replaceState("/smartphonePlayers/" + nextPlayer.name);
     }
   }
+
+  public send(){
+    (<HTMLInputElement>document.getElementById("text_box")).value = "";
+  }
 }

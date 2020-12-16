@@ -45,7 +45,7 @@
 		<textarea id="text_box" #ask placeholder="Ask {{event.message.name}} anything:" rows="5" cols="45"></textarea>
 		<div class="emojis_and_send">
 			<img id="emojis" alt="emojis" src="./assets/icons/emojis.png">
-			<img id="send" alt="send" src="./assets/icons/send.png">
+			<img id="send" (click)="send()" alt="send" src="./assets/icons/send.png">
 		</div>
 	</div>
 
