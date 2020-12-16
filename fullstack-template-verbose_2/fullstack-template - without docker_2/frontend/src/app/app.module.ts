@@ -25,6 +25,7 @@ import { VoteDoneSmartphoneComponent } from './pages/vote-done-smartphone/vote-d
 import { WallHomeComponent } from './pages/wall-home/wall-home.component';
 import { TVVotedoneComponent } from './pages/tvvotedone/tvvotedone.component';
 import { Globals } from './pages/globals';
+import { VirtualComponent } from './pages/virtual/virtual.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { Globals } from './pages/globals';
     VoteDoneSmartphoneComponent,
     WallHomeComponent,
     TVVotedoneComponent,
+    VirtualComponent,
   ],
   imports: [
     BrowserModule,
