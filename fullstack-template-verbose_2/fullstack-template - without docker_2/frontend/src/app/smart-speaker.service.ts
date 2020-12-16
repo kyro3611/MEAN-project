@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import Artyom from '../../node_modules/artyom.js/build/artyom';
 import { environment } from 'src/environments/environment';
+import { TVVoteDoneService } from 'src/app/global/services/TVVoteDOne/TVVoteDone.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class SmartSpeakerService {
 
   private artyom: any;
 
-  constructor() {
+  constructor(private TVVoteDoneService: TVVoteDoneService) {
     this.artyom = new Artyom();
   }
 
@@ -69,13 +70,14 @@ export class SmartSpeakerService {
    * @param text a phrase/word or multiple phrases/words to be recognized
    * @param onVoiceRecognition a callback that is triggered whenever the system recognizes the given text
    */
-  addCommand(text: string | string[], onVoiceRecognition: () => any) {
+  addCommand(text: string | string[], onVoiceRecognition: (i, wildcard) => any) {
     var command = typeof (text) === 'string' ? [text] : text;
 
     var newCommand = {
+      smart:true,
       indexes: command,
-      action: () => {
-        onVoiceRecognition();
+      action: (i, wildcard) => {
+        onVoiceRecognition(i, wildcard);
       }
     };
 
@@ -87,8 +89,13 @@ export class SmartSpeakerService {
 
   /**vote a player with voice command */
   public voteVoiceCommand(){
-    this.addCommand('Vote ' + ['Kevin', 'Cody', 'Nicole A.'],()=>{
-      /**TO BE FILLED */
+    this.addCommand('Vote for *' ,(i, wildcard)=>{
+      /**if the second argument (wildcard) is valid vote this player */
+      if(wildcard == 'Cody' || wildcard == 'Kevin' || wildcard == 'Nicole A.'){
+        this.TVVoteDoneService.votePlayer(wildcard+".jpg", " " + wildcard).subscribe();
+      } else {
+        console.log('Wrong name');
+      }
     })
   }
 }

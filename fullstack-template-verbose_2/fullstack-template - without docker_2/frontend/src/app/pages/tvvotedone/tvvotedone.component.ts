@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TVVoteDoneService } from 'src/app/global/services/TVVoteDOne/TVVoteDone.service';
 import playersJson from '../../../assets/playersJson.json';
 import { Location } from '@angular/common';
+import { SmartSpeakerService } from 'src/app/smart-speaker.service'
 
 @Component({
   selector: 'ami-fullstack-tvvotedone',
@@ -16,8 +17,9 @@ export class TVVotedoneComponent implements OnInit {
   public name;
   public socketEvents: { event: string, message: any }[];
 
-  constructor(private route: ActivatedRoute, private TVVoteDoneService: TVVoteDoneService,
-    private socketService: SocketsService, private location: Location) {
+  constructor(private route: ActivatedRoute, private TVVoteDoneService: TVVoteDoneService, 
+    private SMartSpeakerService: SmartSpeakerService, private socketService: SocketsService, 
+    private location: Location) {
     this.socketEvents = [];
   }
 
@@ -36,6 +38,8 @@ export class TVVotedoneComponent implements OnInit {
       this.socketEvents.push(msg);
     })
     this.votePlayer();
+
+    this.SMartSpeakerService.voteVoiceCommand();
   }
 
   public votePlayer(){
