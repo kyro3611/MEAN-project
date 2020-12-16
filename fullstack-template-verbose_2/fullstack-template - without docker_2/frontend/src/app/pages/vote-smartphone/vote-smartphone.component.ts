@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'ami-fullstack-vote-smartphone',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoteSmartphoneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router, private globals: Globals) { }
 
   ngOnInit() {
+    if (this.globals.voted == 1) {
+      this.route.navigate(['/voteSmartphone', this.globals.votedname]);
+    }
   }
 
 }

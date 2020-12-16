@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { VoteDoneSmartphoneService } from 'src/app/global/services/VoteDoneSmartphone/VoteDoneSmartphone.service';
 import playersJson from '../../../assets/playersJson.json';
 import { Location } from '@angular/common';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'ami-fullstack-vote-done-smartphone',
@@ -16,7 +17,7 @@ export class VoteDoneSmartphoneComponent implements OnInit {
   public socketEvents: { event: string, message: any }[];
 
   constructor(private route: ActivatedRoute, private voteDoneSmartphoneService: VoteDoneSmartphoneService,
-    private socketService: SocketsService, private location: Location) {
+    private socketService: SocketsService, private location: Location, private globals: Globals) {
     this.socketEvents = [];
   }
 
@@ -29,14 +30,7 @@ export class VoteDoneSmartphoneComponent implements OnInit {
     }
     this.name = this.route.snapshot.paramMap.get("name");
     this.img = player.img;
-    this.socketService.syncMessages("vote complete").subscribe(msg => {
-      this.socketEvents.push(msg);
-    })
-    this.voteComplete();
+    this.globals.voted = 1;
+    this.globals.votedname = this.name;
   }
-
-  public voteComplete() {
-    this.voteDoneSmartphoneService.voteComplete(this.name, " " + this.img).subscribe();
-  }
-
 }

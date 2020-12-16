@@ -54,10 +54,10 @@
         <button id="pollb" class="playersnavb" routerLink='/TVPolls'>
             <img id="pollicon" class="playersnavicon" src="./assets/images/players/pollicon.svg" alt="Poll Icon">
         </button>
-        <div *ngFor="let event of socketEvents" id="votesdiv">
+        <div id="votesdiv">
             <div id="week"><b>Week 3</b></div>
-            <img id="votedphoto" src="{{event.message.img}}" alt="Nicole A. Photo">
-            <div id='voteddiv'>You voted for <span id="votedtxt"><b>{{event.message.name}}</b></span><br>Thank you!
+            <img id="votedphoto" src="{{img}}" alt="Nicole A. Photo">
+            <div id='voteddiv'>You voted for <span id="votedtxt"><b>{{name}}</b></span><br>Thank you!
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TVVoteDoneService } from 'src/app/global/services/TVVoteDOne/TVVoteDone.service';
 import playersJson from '../../../assets/playersJson.json';
 import { Location } from '@angular/common';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'ami-fullstack-tvvotedone',
@@ -16,8 +17,7 @@ export class TVVotedoneComponent implements OnInit {
   public name;
   public socketEvents: { event: string, message: any }[];
 
-  constructor(private route: ActivatedRoute, private TVVoteDoneService: TVVoteDoneService, 
-    private socketService: SocketsService, private location: Location) {
+  constructor(private route: ActivatedRoute, private socketService: SocketsService, private globals: Globals) {
     this.socketEvents = [];
   }
 
@@ -31,18 +31,7 @@ export class TVVotedoneComponent implements OnInit {
     }
     this.name = this.route.snapshot.paramMap.get("name");
     this.img = player.img;
-
-    /**listening "vote from tv" event" */
-    this.socketService.syncMessages("vote from TV").subscribe(msg => {
-      console.log(msg);
-      this.socketEvents.push(msg);
-      
-    })
-    this.votePlayer();
+    this.globals.voted = 1;
+    this.globals.votedname = this.name;
   }
-
-  public votePlayer(){
-    this.TVVoteDoneService.votePlayer(this.img, " " + this.name).subscribe();
-  }
-
 }

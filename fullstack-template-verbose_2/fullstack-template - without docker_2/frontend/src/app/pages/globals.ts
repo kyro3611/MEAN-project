@@ -6,4 +6,6 @@ export class Globals {
     currentVideo = 0;
     currentVideoPlayer = 0;
     paused = 0;
+    voted = 0;
+    votedname;
 }
