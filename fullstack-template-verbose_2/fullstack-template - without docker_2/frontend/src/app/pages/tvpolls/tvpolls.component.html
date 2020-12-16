@@ -54,35 +54,25 @@
         <button id="pollb" class="playersnavb">
             <img id="pollicon" class="playersnavicon" src="./assets/images/players/pollicon.svg" alt="Poll Icon">
         </button>
+        <button id="upb" class="updownb" (click)="nextWeek(-1)">
+            <img class="updownicon" src="./assets/images/players/upicon.svg" alt="Previous Week Icon">
+        </button>
+        <button id="downb" class="updownb" (click)="nextWeek(1)">
+            <img class="updownicon" src="./assets/images/players/downicon.svg" alt="Next Week Icon">
+        </button>
         <div id="polldiv">
-            <div id="week">Week 5</div>
-            <div class="percentagediv">
-                <div class="percentagephotodiv">
-                    <img id="percentagephoto1" class="percentagephoto" src="./assets/images/players/david.png" alt="David Photo">
+            <div id="week"></div>
+            <div *ngFor="let event of socketEvents">
+                <div *ngFor="let p of event.message.polls" class="percentagediv">
+                    <div class="percentagephotodiv">
+                        <img class="ripicon" src="{{p.rip}}" alt="">
+                        <img class="percentagephoto" src="{{p.img}}" alt="">
+                    </div>
+                    <div class="rectangle">
+                        <div class="percentagenum">{{p.percentage}}</div>
+                    </div>
+                    <div class="percentagetxt">{{p.name}}</div>
                 </div>
-                <div class="rectangle">
-                    <div id="percentagenum1" class="percentagenum">50%</div>
-                </div>
-                <div id="percentagetxt1" class="percentagetxt">David</div>
-            </div>
-            <div class="percentagediv">
-                <div class="percentagephotodiv">
-                    <img class="ripicon" src="./assets/images/players/ripicon.svg" alt="Player Gone Icon">
-                    <img id="percentagephoto2" class="percentagephoto" src="./assets/images/players/tyler.png" alt="Tyler Photo">
-                </div>
-                <div class="rectangle">
-                    <div id="percentagenum2" class="percentagenum">15%</div>
-                </div>
-                <div id="percentagetxt2" class="percentagetxt">Tyler</div>
-            </div>
-            <div class="percentagediv">
-                <div class="percentagephotodiv">
-                    <img id="percentagephoto3" class="percentagephoto" src="./assets/images/players/cody.png" alt="Cody Photo">
-                </div>
-                <div class="rectangle">
-                    <div id="percentagenum3" class="percentagenum">35%</div>
-                </div>
-                <div id="percentagetxt4" class="percentagetxt">Cody</div>
             </div>
         </div>
     </div>

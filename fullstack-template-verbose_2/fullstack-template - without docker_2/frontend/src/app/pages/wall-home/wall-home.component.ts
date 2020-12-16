@@ -1,5 +1,4 @@
 import { Component, Renderer2, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { WallHomeService } from 'src/app/global/services/wallHome/wallHome.service';
 import { SocketsService } from 'src/app/global/services';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -12,14 +11,13 @@ export class WallHomeComponent implements OnInit {
   @ViewChild('logo', { static: false }) public logo: ElementRef;
   @ViewChild('video', { static: false }) public video: ElementRef;
 
-  public socketEvents: {event: string, message: any}[];
+  public socketEvents: { event: string, message: any }[];
 
   /**indicates if video is paused(0) or not(1) */
   public paused = 0;
 
-  constructor(private route:ActivatedRoute, private wallHomeService: WallHomeService,
-    private socketService: SocketsService, private renderer: Renderer2) {
-      this.socketEvents = [];
+  constructor(private route: ActivatedRoute, private socketService: SocketsService, private renderer: Renderer2) {
+    this.socketEvents = [];
   }
 
   ngOnInit() {
@@ -37,7 +35,7 @@ export class WallHomeComponent implements OnInit {
     this.socketService.syncMessages("pause or play").subscribe(msg => {
       var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
       iframe
-      if(this.paused == 0 ){
+      if (this.paused == 0) {
         this.paused = 1;
         console.log('video paused');
         iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'); /** pause*/
